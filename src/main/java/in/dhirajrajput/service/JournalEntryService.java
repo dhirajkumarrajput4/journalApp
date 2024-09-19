@@ -53,7 +53,7 @@ public class JournalEntryService {
             User user = userService.findByUserName(userName).orElseThrow(() -> new RuntimeException("User not found"));
             user.getJournalEntries().removeIf(x -> x.getId().equals(id));
             userService.saveUser(user);
-            this.journalEntryRepo.deleteById(id);
+            this.journalEntryRepo.deleteById(id); 
             return true;
         } catch (Exception e) {
             throw new RuntimeException("An error occured while deleting the record");
