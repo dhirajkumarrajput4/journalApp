@@ -1,6 +1,5 @@
 package in.dhirajrajput.controller;
 
-import in.dhirajrajput.entity.JournalEntry;
 import in.dhirajrajput.entity.User;
 import in.dhirajrajput.service.UserService;
 import org.bson.types.ObjectId;
@@ -45,12 +44,14 @@ public class UserController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    @PutMapping("byId/{id}")
-    public ResponseEntity<User> updateJournalEtity(@PathVariable("id") ObjectId id,
-                                                           @RequestBody User user) {
-        User existingUser = this.userService.findUserByid(id).orElse(null);
+    @PutMapping("/{userName}")
+    public ResponseEntity<User> updateJournalEtity(@PathVariable("userName") String userName,
+            @RequestBody User user) {
+        User existingUser = this.userService.findByUserName(userName).orElse(null);
         if (existingUser != null) {
-
+            existingUser.setUserName(user.getUserName());
+            existingUser.setPassword(user.getPassword());
+            userService.saveUser(existingUser);
             return new ResponseEntity<>(existingUser, HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);

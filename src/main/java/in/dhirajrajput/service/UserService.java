@@ -34,4 +34,8 @@ public class UserService {
     public void deleteUserById(ObjectId id) {
         this.userRepo.deleteById(id);
     }
+
+    public Optional<User> findByUserName(String userName){
+        return this.userRepo.findByUserName(userName);
+    }
 }
