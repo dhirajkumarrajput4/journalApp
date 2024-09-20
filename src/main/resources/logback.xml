@@ -1,0 +1,4 @@
+<configuration>
+    <appender name="myConsoleAppender" class=>
+    </appender>
+</configuration>
