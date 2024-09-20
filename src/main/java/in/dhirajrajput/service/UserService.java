@@ -26,6 +26,10 @@ public class UserService {
         return this.userRepo.save(user);
     }
 
+    public User updateUser(User user) {
+        return this.userRepo.save(user);
+    }
+
     public List<User> findAllUsers() {
         return this.userRepo.findAll();
     }
@@ -42,7 +46,7 @@ public class UserService {
         this.userRepo.deleteById(id);
     }
 
-    public Optional<User> findByUserName(String userName){
+    public Optional<User> findByUserName(String userName) {
         return this.userRepo.findByUserName(userName);
     }
 }
