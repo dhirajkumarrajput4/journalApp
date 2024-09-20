@@ -14,6 +14,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import in.dhirajrajput.entity.User;
 import in.dhirajrajput.repository.UserRepo;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 @SpringBootTest
 public class UserDetailsServiceImplTest {
@@ -31,13 +34,15 @@ public class UserDetailsServiceImplTest {
 
     @Test
     public void loadUserByUserNameTest() {
-        when(userRepo.findByUserName(ArgumentMatchers.anyString()).get())
-                .thenReturn(User.builder().userName("ram")
-                .password("ram")
-                .build());
+        // Correct the mock to return Optional<User> rather than calling get() directly.
+        when(userRepo.findByUserName(ArgumentMatchers.anyString()))
+                .thenReturn(Optional.of(User.builder()
+                        .userName("Santosh")
+                        .password("Santosh")
+                        .roles(new ArrayList<>(List.of("USER")))
+                        .build()));
 
-        UserDetails usr = userDetailServiceImpl.loadUserByUsername("ram");
+        UserDetails usr = userDetailServiceImpl.loadUserByUsername("Santosh");
         assertNotNull(usr);
-
     }
 }
