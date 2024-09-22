@@ -1,5 +1,6 @@
 package in.dhirajrajput.controller;
 
+import in.dhirajrajput.response_request.UserDto;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,16 +17,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import in.dhirajrajput.entity.User;
 
 import java.util.*;
+
 import in.dhirajrajput.service.UserService;
 
 @RequestMapping("/admin")
 public class AdminController {
-    
+
     @Autowired
     private UserService userService;
 
     @PostMapping("/create")
-    public ResponseEntity<?> createUser(@RequestBody User user) {
+    public ResponseEntity<?> createUser(@RequestBody UserDto user) {
         this.userService.saveUser(user);
         return new ResponseEntity<>(user, HttpStatus.CREATED);
     }
@@ -53,13 +55,11 @@ public class AdminController {
     }
 
     @PutMapping("/update")
-    public ResponseEntity<User> updateJournalEtity(@RequestBody User user) {
+    public ResponseEntity<User> updateUser(@RequestBody UserDto user) {
         String userName = SecurityContextHolder.getContext().getAuthentication().getName();
         User existingUser = this.userService.findByUserName(userName).orElse(null);
         if (existingUser != null) {
-            existingUser.setUserName(user.getUserName());
-            existingUser.setPassword(user.getPassword());
-            userService.saveUser(existingUser);
+            userService.updateUserDetails(user, existingUser);
             return new ResponseEntity<>(existingUser, HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);

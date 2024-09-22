@@ -2,9 +2,11 @@ package in.dhirajrajput.controller;
 
 import in.dhirajrajput.entity.JournalEntry;
 import in.dhirajrajput.entity.User;
+import in.dhirajrajput.response_request.JournalEntryDto;
 import in.dhirajrajput.service.JournalEntryService;
 import in.dhirajrajput.service.UserService;
 
+import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,6 +18,7 @@ import java.util.*;
 
 @RestController
 @RequestMapping("/journal")
+@Slf4j
 public class JournalEntryController {
 
     @Autowired
@@ -28,7 +31,7 @@ public class JournalEntryController {
     public ResponseEntity<?> getAllEntryOfUser() {
         String userName = SecurityContextHolder.getContext().getAuthentication().getName();
 
-        User user = userService.findByUserName(userName).orElseThrow(() -> new RuntimeException("User not found"));
+        User user = userService.findByUserName(userName).orElseThrow(() -> new RuntimeException("User not found with name: "+userName));
         List<JournalEntry> journalEntryList = user.getJournalEntries();
         if (!journalEntryList.isEmpty()) {
             return new ResponseEntity<>(journalEntryList, HttpStatus.OK);
@@ -57,17 +60,16 @@ public class JournalEntryController {
 
     @PutMapping("byId/{id}")
     public ResponseEntity<JournalEntry> updateJournalEtity(@PathVariable("id") ObjectId id,
-            @RequestBody JournalEntry journalEntry) {
+                                                           @RequestBody JournalEntryDto journalEntry) {
         String userName = SecurityContextHolder.getContext().getAuthentication().getName();
-        Optional<User> userOptional= userService.findByUserName(userName);
-        JournalEntry existingEntity= userOptional.get().getJournalEntries().stream().filter(entry->entry.getId().equals(id)).findFirst().orElse(null);
-        // JournalEntry existingEntity = this.journalEntryService.findById(id).orElse(null);
+        User user = userService.findByUserName(userName).orElseThrow(() -> new RuntimeException("User not found with name : "+userName));
+        JournalEntry existingEntity = user.getJournalEntries().stream().filter(entry -> entry.getId().equals(id)).findFirst().orElse(null);
         if (existingEntity != null) {
-            existingEntity.setContent(journalEntry.getContent() != null && !journalEntry.getContent().equals("")
+            existingEntity.setContent(journalEntry.getContent() != null && !journalEntry.getContent().isEmpty()
                     ? journalEntry.getContent()
                     : existingEntity.getContent());
             existingEntity.setTitle(
-                    journalEntry.getTitle() != null && !journalEntry.getTitle().equals("") ? journalEntry.getTitle()
+                    !journalEntry.getTitle().isEmpty() ? journalEntry.getTitle()
                             : existingEntity.getTitle());
             journalEntryService.saveEntry(journalEntry, userName);
             return new ResponseEntity<>(existingEntity, HttpStatus.OK);
@@ -78,13 +80,13 @@ public class JournalEntryController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<JournalEntry> createEntry(@RequestBody JournalEntry journalEntry) {
+    public ResponseEntity<JournalEntryDto> createEntry(@RequestBody JournalEntryDto journalEntry) {
         String userName = SecurityContextHolder.getContext().getAuthentication().getName();
         try {
             this.journalEntryService.saveEntry(journalEntry, userName);
             return new ResponseEntity<>(journalEntry, HttpStatus.CREATED);
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
 

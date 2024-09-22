@@ -1,6 +1,7 @@
 package in.dhirajrajput.controller;
 
 import in.dhirajrajput.entity.User;
+import in.dhirajrajput.response_request.UserDto;
 import in.dhirajrajput.response_request.WeatherResponse;
 import in.dhirajrajput.service.UserService;
 import in.dhirajrajput.service.WeatherService;
@@ -38,13 +39,11 @@ public class UserController {
     }
 
     @PutMapping("/update")
-    public ResponseEntity<User> updateJournalEtity(@RequestBody User user) {
+    public ResponseEntity<User> updateJournalEtity(@RequestBody UserDto user) {
         String userName = SecurityContextHolder.getContext().getAuthentication().getName();
         User existingUser = this.userService.findByUserName(userName).orElse(null);
         if (existingUser != null) {
-            existingUser.setUserName(user.getUserName());
-            existingUser.setPassword(user.getPassword());
-            userService.saveUser(existingUser);
+            userService.updateUserDetails(user, existingUser);
             return new ResponseEntity<>(existingUser, HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -57,7 +56,7 @@ public class UserController {
         WeatherResponse weather = weatherService.getWeatherResponse("New Delhi");
         String greeting = "";
         if (weather != null) {
-            greeting = ", Weather feel like " + weather.getCurrent().getFeelsLike()+" degree Celsius";
+            greeting = ", Weather feel like " + weather.getCurrent().getFeelsLike() + " degree Celsius";
         }
         return new ResponseEntity<>("Hi " + userName + greeting, HttpStatus.OK);
     }

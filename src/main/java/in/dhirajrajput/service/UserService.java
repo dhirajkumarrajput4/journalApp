@@ -2,6 +2,7 @@ package in.dhirajrajput.service;
 
 import in.dhirajrajput.entity.User;
 import in.dhirajrajput.repository.UserRepo;
+import in.dhirajrajput.response_request.UserDto;
 import lombok.extern.slf4j.Slf4j;
 
 import org.bson.types.ObjectId;
@@ -23,19 +24,39 @@ public class UserService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    public User saveUser(User user) {
+    public User saveUser(UserDto userDto) {
         try {
-            user.setPassword(passwordEncoder.encode(user.getPassword()));
+            User user = new User();
+            user.setUserName(userDto.getUserName());
+            user.setPassword(passwordEncoder.encode(userDto.getPassword()));
             user.setRoles(Arrays.asList("USER"));
             return this.userRepo.save(user);
         } catch (Exception exception) {
-            log.error("Getting error while saving user for: {}", user.toString());
+            log.error("Getting error while saving user for: {}", userDto.toString());
             throw new RuntimeException("Getting error while saving the user" + exception.getMessage());
         }
     }
 
     public void updateUser(User user) {
         this.userRepo.save(user);
+    }
+
+    public void updateUserDetails(UserDto user, User existingUser) {
+        try {
+            if (existingUser != null) {
+                existingUser.setUserName(user.getUserName());
+                existingUser.setPassword(user.getPassword());
+                updateUser(existingUser);
+            }
+            {
+                log.error("User Not found for update.");
+                throw new IllegalStateException("User not found");
+            }
+        } catch (Exception exception) {
+            log.error("This user not able to update." + user);
+            throw new IllegalStateException("Unable to update user.");
+        }
+
     }
 
     public List<User> findAllUsers() {
