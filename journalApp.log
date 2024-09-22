@@ -5000,3 +5000,44 @@ Consider defining a bean of type 'org.springframework.web.client.RestTemplate' i
 13:41:11:4130 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
 13:41:11:4380 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path ''
 13:41:11:4470 [main] INFO  in.dhirajrajput.JournalApplication - Started JournalApplication in 4.401 seconds (process running for 5.27)
+13:56:18:8050 [main] INFO  in.dhirajrajput.JournalApplication - Starting JournalApplication using Java 17.0.12 with PID 14464 (D:\Spring Boot Project\journalApp\journalApp\target\classes started by Raj Dhiraj Kumar in D:\Spring Boot Project\journalApp\journalApp)
+13:56:18:8090 [main] INFO  in.dhirajrajput.JournalApplication - No active profile set, falling back to 1 default profile: "default"
+13:56:19:7520 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+13:56:19:8290 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69 ms. Found 2 MongoDB repository interfaces.
+13:56:20:5410 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+13:56:20:5510 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+13:56:20:5550 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:56:20:5550 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+13:56:20:6280 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:56:20:6310 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1750 ms
+13:56:22:7270 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.HealthCheckController:
+	{GET [/public/health-check]}: healthCheck()
+	{POST [/public/create]}: createUser(UserDto)
+13:56:22:7350 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.JournalEntryController:
+	{POST [/journal/create]}: createEntry(JournalEntryDto)
+	{GET [/journal/byId/{id}]}: getEntityById(ObjectId)
+	{DELETE [/journal/byId/{id}]}: deleteEntityById(ObjectId)
+	{GET [/journal/list]}: getAllEntryOfUser()
+	{PUT [/journal/byId/{id}]}: updateJournalEtity(ObjectId,JournalEntryDto)
+13:56:22:7370 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.UserController:
+	{DELETE [/user/byId/{id}]}: deleteEntityById(ObjectId)
+	{PUT [/user/update]}: updateJournalEtity(UserDto)
+	{GET [/user/byId/{id}]}: getUserById(ObjectId)
+	{GET [/user/fetch-weather]}: getWeatherData()
+13:56:22:7450 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+13:56:22:7550 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+13:56:22:8470 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+13:56:22:9100 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6133e20b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30ffb2a6, org.springframework.security.web.context.SecurityContextHolderFilter@2342f1ff, org.springframework.security.web.header.HeaderWriterFilter@2b7774d5, org.springframework.web.filter.CorsFilter@612af486, org.springframework.security.web.authentication.logout.LogoutFilter@6e239337, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6d17914a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@cec590c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1570cad0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3d033453, org.springframework.security.web.access.ExceptionTranslationFilter@18715bb, org.springframework.security.web.access.intercept.AuthorizationFilter@52a67293]
+13:56:23:1570 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+13:56:23:1790 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path ''
+13:56:23:1900 [main] INFO  in.dhirajrajput.JournalApplication - Started JournalApplication in 5.014 seconds (process running for 5.616)
+13:56:28:3600 [http-nio-9090-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:56:28:3610 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:56:28:3630 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+13:56:28:8920 [http-nio-9090-exec-2] DEBUG i.m.c.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework
