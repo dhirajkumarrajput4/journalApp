@@ -4464,3 +4464,461 @@ java.lang.RuntimeException: Getting error while saving the userWrite operation e
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:840)
+10:59:59:0850 [main] INFO  in.dhirajrajput.JournalApplication - Starting JournalApplication using Java 17.0.12 with PID 17992 (D:\Spring Boot Project\journalApp\journalApp\target\classes started by Raj Dhiraj Kumar in D:\Spring Boot Project\journalApp\journalApp)
+10:59:59:0890 [main] INFO  in.dhirajrajput.JournalApplication - No active profile set, falling back to 1 default profile: "default"
+11:00:00:2920 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+11:00:00:4080 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 105 ms. Found 2 MongoDB repository interfaces.
+11:00:01:2070 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+11:00:01:2170 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+11:00:01:2210 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+11:00:01:2210 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+11:00:01:2940 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11:00:01:2960 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2119 ms
+11:00:32:2300 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through field 'userDetailsService': Error creating bean with name 'userDetailServiceImpl': Unsatisfied dependency expressed through field 'userRepo': Error creating bean with name 'userRepo' defined in in.dhirajrajput.repository.UserRepo defined in @EnableMongoRepositories declared on MongoRepositoriesRegistrar.EnableMongoRepositoriesConfiguration: Cannot resolve reference to bean 'mongoTemplate' while setting bean property 'mongoOperations'
+11:00:32:2350 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+11:00:32:2500 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+11:00:32:2720 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through field 'userDetailsService': Error creating bean with name 'userDetailServiceImpl': Unsatisfied dependency expressed through field 'userRepo': Error creating bean with name 'userRepo' defined in in.dhirajrajput.repository.UserRepo defined in @EnableMongoRepositories declared on MongoRepositoriesRegistrar.EnableMongoRepositoriesConfiguration: Cannot resolve reference to bean 'mongoTemplate' while setting bean property 'mongoOperations'
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:787)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at in.dhirajrajput.JournalApplication.main(JournalApplication.java:16)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailServiceImpl': Unsatisfied dependency expressed through field 'userRepo': Error creating bean with name 'userRepo' defined in in.dhirajrajput.repository.UserRepo defined in @EnableMongoRepositories declared on MongoRepositoriesRegistrar.EnableMongoRepositoriesConfiguration: Cannot resolve reference to bean 'mongoTemplate' while setting bean property 'mongoOperations'
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:787)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784)
+	... 20 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepo' defined in in.dhirajrajput.repository.UserRepo defined in @EnableMongoRepositories declared on MongoRepositoriesRegistrar.EnableMongoRepositoriesConfiguration: Cannot resolve reference to bean 'mongoTemplate' while setting bean property 'mongoOperations'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1685)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1434)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784)
+	... 34 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongoTemplate' defined in class path resource [org/springframework/boot/autoconfigure/data/mongo/MongoDatabaseFactoryDependentConfiguration.class]: Failed to instantiate [org.springframework.data.mongodb.core.MongoTemplate]: Factory method 'mongoTemplate' threw exception with message: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=REPLICA_SET, servers=[{address=cluster0-shard-00-01.ku0aq.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: Received fatal alert: internal_error}}, {address=cluster0-shard-00-00.ku0aq.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: Received fatal alert: internal_error}}, {address=cluster0-shard-00-02.ku0aq.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: Received fatal alert: internal_error}}]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	... 47 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.mongodb.core.MongoTemplate]: Factory method 'mongoTemplate' threw exception with message: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=REPLICA_SET, servers=[{address=cluster0-shard-00-01.ku0aq.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: Received fatal alert: internal_error}}, {address=cluster0-shard-00-00.ku0aq.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: Received fatal alert: internal_error}}, {address=cluster0-shard-00-02.ku0aq.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: Received fatal alert: internal_error}}]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:177)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	... 57 common frames omitted
+Caused by: org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=REPLICA_SET, servers=[{address=cluster0-shard-00-01.ku0aq.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: Received fatal alert: internal_error}}, {address=cluster0-shard-00-00.ku0aq.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: Received fatal alert: internal_error}}, {address=cluster0-shard-00-02.ku0aq.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: Received fatal alert: internal_error}}]
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:88)
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:2997)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:603)
+	at org.springframework.data.mongodb.core.DefaultIndexOperations.execute(DefaultIndexOperations.java:215)
+	at org.springframework.data.mongodb.core.DefaultIndexOperations.ensureIndex(DefaultIndexOperations.java:119)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.createIndex(MongoPersistentEntityIndexCreator.java:153)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.checkForAndCreateIndexes(MongoPersistentEntityIndexCreator.java:143)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.checkForIndexes(MongoPersistentEntityIndexCreator.java:127)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.<init>(MongoPersistentEntityIndexCreator.java:96)
+	at org.springframework.data.mongodb.core.index.MongoPersistentEntityIndexCreator.<init>(MongoPersistentEntityIndexCreator.java:73)
+	at org.springframework.data.mongodb.core.MongoTemplate.<init>(MongoTemplate.java:263)
+	at org.springframework.boot.autoconfigure.data.mongo.MongoDatabaseFactoryDependentConfiguration.mongoTemplate(MongoDatabaseFactoryDependentConfiguration.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	... 58 common frames omitted
+Caused by: com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches WritableServerSelector. Client view of cluster state is {type=REPLICA_SET, servers=[{address=cluster0-shard-00-01.ku0aq.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: Received fatal alert: internal_error}}, {address=cluster0-shard-00-00.ku0aq.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: Received fatal alert: internal_error}}, {address=cluster0-shard-00-02.ku0aq.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: Received fatal alert: internal_error}}]
+	at com.mongodb.internal.connection.BaseCluster.createTimeoutException(BaseCluster.java:380)
+	at com.mongodb.internal.connection.BaseCluster.selectServer(BaseCluster.java:125)
+	at com.mongodb.internal.connection.AbstractMultiServerCluster.selectServer(AbstractMultiServerCluster.java:54)
+	at com.mongodb.internal.binding.ClusterBinding.getWriteConnectionSource(ClusterBinding.java:134)
+	at com.mongodb.client.internal.ClientSessionBinding.getConnectionSource(ClientSessionBinding.java:128)
+	at com.mongodb.client.internal.ClientSessionBinding.getWriteConnectionSource(ClientSessionBinding.java:102)
+	at com.mongodb.internal.operation.SyncOperationHelper.withConnection(SyncOperationHelper.java:106)
+	at com.mongodb.internal.operation.CreateIndexesOperation.execute(CreateIndexesOperation.java:129)
+	at com.mongodb.internal.operation.CreateIndexesOperation.execute(CreateIndexesOperation.java:68)
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:173)
+	at com.mongodb.client.internal.MongoCollectionImpl.executeCreateIndexes(MongoCollectionImpl.java:913)
+	at com.mongodb.client.internal.MongoCollectionImpl.createIndexes(MongoCollectionImpl.java:896)
+	at com.mongodb.client.internal.MongoCollectionImpl.createIndexes(MongoCollectionImpl.java:891)
+	at com.mongodb.client.internal.MongoCollectionImpl.createIndex(MongoCollectionImpl.java:876)
+	at org.springframework.data.mongodb.core.DefaultIndexOperations.lambda$ensureIndex$0(DefaultIndexOperations.java:129)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:601)
+	... 72 common frames omitted
+11:05:14:6500 [main] INFO  in.dhirajrajput.JournalApplication - Starting JournalApplication using Java 17.0.12 with PID 5792 (D:\Spring Boot Project\journalApp\journalApp\target\classes started by Raj Dhiraj Kumar in D:\Spring Boot Project\journalApp\journalApp)
+11:05:14:6540 [main] INFO  in.dhirajrajput.JournalApplication - No active profile set, falling back to 1 default profile: "default"
+11:05:15:9270 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+11:05:16:0840 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 150 ms. Found 2 MongoDB repository interfaces.
+11:05:16:9030 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+11:05:16:9150 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+11:05:16:9180 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+11:05:16:9190 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+11:05:16:9870 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11:05:16:9880 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2254 ms
+11:05:19:3480 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.HealthCheckController:
+	{GET [/public/health-check]}: healthCheck()
+	{POST [/public/create]}: createUser(User)
+11:05:19:3570 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.JournalEntryController:
+	{POST [/journal/create]}: createEntry(JournalEntry)
+	{GET [/journal/list]}: getAllEntryOfUser()
+	{DELETE [/journal/byId/{id}]}: deleteEntityById(ObjectId)
+	{GET [/journal/byId/{id}]}: getEntityById(ObjectId)
+	{PUT [/journal/byId/{id}]}: updateJournalEtity(ObjectId,JournalEntry)
+11:05:19:3590 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.UserController:
+	{DELETE [/user/byId/{id}]}: deleteEntityById(ObjectId)
+	{PUT [/user/update]}: updateJournalEtity(User)
+	{GET [/user/byId/{id}]}: getUserById(ObjectId)
+11:05:19:3690 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+11:05:19:3790 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+11:05:19:4810 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+11:05:19:5440 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@adafe19, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7e2bd5e6, org.springframework.security.web.context.SecurityContextHolderFilter@78318ac2, org.springframework.security.web.header.HeaderWriterFilter@775f15fd, org.springframework.web.filter.CorsFilter@76a1146d, org.springframework.security.web.authentication.logout.LogoutFilter@b55f5b7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3b39e79b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@11abd6c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@29b5533, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6ef1c3f7, org.springframework.security.web.access.ExceptionTranslationFilter@4228f269, org.springframework.security.web.access.intercept.AuthorizationFilter@75527e36]
+11:05:19:8480 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+11:05:19:8750 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path ''
+11:05:19:8860 [main] INFO  in.dhirajrajput.JournalApplication - Started JournalApplication in 5.781 seconds (process running for 6.526)
+11:28:05:6930 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+11:28:05:6940 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+11:28:05:6950 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+11:31:24:7780 [http-nio-9090-exec-2] ERROR in.dhirajrajput.service.UserService - Getting error while saving user for: User(id=null, userName=Dhiraj, password=$2a$10$s6vWunFrxI709B2uk/AQq.RjZblgVm.4lwXRoIjTYBUWkfWJCvhd6, journalEntries=null, roles=[USER])
+11:31:24:7850 [http-nio-9090-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Getting error while saving the userWrite operation error on server cluster0-shard-00-02.ku0aq.mongodb.net:27017. Write error: WriteError{code=11000, message='E11000 duplicate key error collection: journalEntry.user index: userName dup key: { userName: "Dhiraj" }', details={}}.] with root cause
+java.lang.RuntimeException: Getting error while saving the userWrite operation error on server cluster0-shard-00-02.ku0aq.mongodb.net:27017. Write error: WriteError{code=11000, message='E11000 duplicate key error collection: journalEntry.user index: userName dup key: { userName: "Dhiraj" }', details={}}.
+	at in.dhirajrajput.service.UserService.saveUser(UserService.java:33)
+	at in.dhirajrajput.controller.HealthCheckController.createUser(HealthCheckController.java:30)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:925)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:181)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+12:27:35:6470 [main] INFO  in.dhirajrajput.JournalApplication - Starting JournalApplication using Java 17.0.12 with PID 8312 (D:\Spring Boot Project\journalApp\journalApp\target\classes started by Raj Dhiraj Kumar in D:\Spring Boot Project\journalApp\journalApp)
+12:27:35:6510 [main] INFO  in.dhirajrajput.JournalApplication - No active profile set, falling back to 1 default profile: "default"
+12:27:36:4390 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+12:27:36:5150 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66 ms. Found 2 MongoDB repository interfaces.
+12:27:37:1590 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+12:27:37:1710 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+12:27:37:1750 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:27:37:1750 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+12:27:37:2450 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:27:37:2470 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1527 ms
+12:27:39:3270 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.HealthCheckController:
+	{POST [/public/create]}: createUser(User)
+	{GET [/public/health-check]}: healthCheck()
+12:27:39:3330 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.JournalEntryController:
+	{POST [/journal/create]}: createEntry(JournalEntry)
+	{DELETE [/journal/byId/{id}]}: deleteEntityById(ObjectId)
+	{GET [/journal/list]}: getAllEntryOfUser()
+	{GET [/journal/byId/{id}]}: getEntityById(ObjectId)
+	{PUT [/journal/byId/{id}]}: updateJournalEtity(ObjectId,JournalEntry)
+12:27:39:3340 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.UserController:
+	{DELETE [/user/byId/{id}]}: deleteEntityById(ObjectId)
+	{PUT [/user/update]}: updateJournalEtity(User)
+	{GET [/user/byId/{id}]}: getUserById(ObjectId)
+	{GET [/user/fetch-weather]}: getWeatherData()
+12:27:39:3410 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+12:27:39:3480 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+12:27:39:4350 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+12:27:39:4900 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@75527e36, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@76596288, org.springframework.security.web.context.SecurityContextHolderFilter@4fd7b79, org.springframework.security.web.header.HeaderWriterFilter@32dcfeea, org.springframework.web.filter.CorsFilter@6d815fb7, org.springframework.security.web.authentication.logout.LogoutFilter@b5312df, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@605c7a9e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@762405bf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e77678c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@51af8049, org.springframework.security.web.access.ExceptionTranslationFilter@6136e1fc, org.springframework.security.web.access.intercept.AuthorizationFilter@4afd65fd]
+12:27:39:7350 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+12:27:39:7610 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path ''
+12:27:39:7720 [main] INFO  in.dhirajrajput.JournalApplication - Started JournalApplication in 4.611 seconds (process running for 5.703)
+12:28:16:8140 [http-nio-9090-exec-4] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:28:16:8140 [http-nio-9090-exec-4] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+12:28:16:8160 [http-nio-9090-exec-4] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+12:43:00:8830 [main] INFO  in.dhirajrajput.JournalApplication - Starting JournalApplication using Java 17.0.12 with PID 9168 (D:\Spring Boot Project\journalApp\journalApp\target\classes started by Raj Dhiraj Kumar in D:\Spring Boot Project\journalApp\journalApp)
+12:43:00:8910 [main] INFO  in.dhirajrajput.JournalApplication - No active profile set, falling back to 1 default profile: "default"
+12:43:02:6730 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+12:43:02:8450 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 160 ms. Found 2 MongoDB repository interfaces.
+12:43:04:4040 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+12:43:04:4170 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+12:43:04:4200 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:43:04:4220 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+12:43:04:5310 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:43:04:5340 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3501 ms
+12:43:07:9160 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.HealthCheckController:
+	{POST [/public/create]}: createUser(User)
+	{GET [/public/health-check]}: healthCheck()
+12:43:07:9370 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.JournalEntryController:
+	{POST [/journal/create]}: createEntry(JournalEntry)
+	{GET [/journal/list]}: getAllEntryOfUser()
+	{DELETE [/journal/byId/{id}]}: deleteEntityById(ObjectId)
+	{GET [/journal/byId/{id}]}: getEntityById(ObjectId)
+	{PUT [/journal/byId/{id}]}: updateJournalEtity(ObjectId,JournalEntry)
+12:43:07:9490 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.UserController:
+	{DELETE [/user/byId/{id}]}: deleteEntityById(ObjectId)
+	{PUT [/user/update]}: updateJournalEtity(User)
+	{GET [/user/byId/{id}]}: getUserById(ObjectId)
+	{GET [/user/fetch-weather]}: getWeatherData()
+12:43:07:9690 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+12:43:07:9940 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+12:43:08:2650 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+12:43:08:4460 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@75527e36, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@76596288, org.springframework.security.web.context.SecurityContextHolderFilter@4fd7b79, org.springframework.security.web.header.HeaderWriterFilter@32dcfeea, org.springframework.web.filter.CorsFilter@6d815fb7, org.springframework.security.web.authentication.logout.LogoutFilter@b5312df, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@605c7a9e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@762405bf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e77678c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@51af8049, org.springframework.security.web.access.ExceptionTranslationFilter@6136e1fc, org.springframework.security.web.access.intercept.AuthorizationFilter@4afd65fd]
+12:43:09:1760 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+12:43:09:2500 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path ''
+12:43:09:2740 [main] INFO  in.dhirajrajput.JournalApplication - Started JournalApplication in 9.276 seconds (process running for 10.943)
+12:58:40:8400 [main] INFO  in.dhirajrajput.JournalApplication - Starting JournalApplication using Java 17.0.12 with PID 6552 (D:\Spring Boot Project\journalApp\journalApp\target\classes started by Raj Dhiraj Kumar in D:\Spring Boot Project\journalApp\journalApp)
+12:58:40:8460 [main] INFO  in.dhirajrajput.JournalApplication - No active profile set, falling back to 1 default profile: "default"
+12:58:41:8720 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+12:58:41:9400 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62 ms. Found 2 MongoDB repository interfaces.
+12:58:42:6930 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+12:58:42:7030 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+12:58:42:7060 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:58:42:7060 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+12:58:42:7850 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:58:42:7870 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1834 ms
+12:58:44:7770 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'weatherService': Error creating bean with name 'weatherService': Unsatisfied dependency expressed through field 'restTemplate': No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+12:58:44:9930 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+12:58:45:0050 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+12:58:45:0300 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field restTemplate in in.dhirajrajput.service.WeatherService required a bean of type 'org.springframework.web.client.RestTemplate' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.web.client.RestTemplate' in your configuration.
+
+12:59:40:4060 [main] INFO  in.dhirajrajput.JournalApplication - Starting JournalApplication using Java 17.0.12 with PID 364 (D:\Spring Boot Project\journalApp\journalApp\target\classes started by Raj Dhiraj Kumar in D:\Spring Boot Project\journalApp\journalApp)
+12:59:40:4100 [main] INFO  in.dhirajrajput.JournalApplication - No active profile set, falling back to 1 default profile: "default"
+12:59:41:3470 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+12:59:41:4380 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 83 ms. Found 2 MongoDB repository interfaces.
+12:59:42:2500 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+12:59:42:2670 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+12:59:42:2690 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:59:42:2690 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+12:59:42:3450 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:59:42:3480 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1859 ms
+12:59:44:5870 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.HealthCheckController:
+	{POST [/public/create]}: createUser(User)
+	{GET [/public/health-check]}: healthCheck()
+12:59:44:5980 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.JournalEntryController:
+	{POST [/journal/create]}: createEntry(JournalEntry)
+	{DELETE [/journal/byId/{id}]}: deleteEntityById(ObjectId)
+	{GET [/journal/list]}: getAllEntryOfUser()
+	{GET [/journal/byId/{id}]}: getEntityById(ObjectId)
+	{PUT [/journal/byId/{id}]}: updateJournalEtity(ObjectId,JournalEntry)
+12:59:44:6030 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.UserController:
+	{DELETE [/user/byId/{id}]}: deleteEntityById(ObjectId)
+	{PUT [/user/update]}: updateJournalEtity(User)
+	{GET [/user/fetch-weather]}: getWeatherData()
+	{GET [/user/byId/{id}]}: getUserById(ObjectId)
+12:59:44:6130 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+12:59:44:6280 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+12:59:44:7800 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+12:59:44:8660 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1377b1a0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@48cf8414, org.springframework.security.web.context.SecurityContextHolderFilter@7f93f4c, org.springframework.security.web.header.HeaderWriterFilter@39ace1a7, org.springframework.web.filter.CorsFilter@27dbaa33, org.springframework.security.web.authentication.logout.LogoutFilter@2964511, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4243341e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@456aa471, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@69e2fe3b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@15d65fcf, org.springframework.security.web.access.ExceptionTranslationFilter@67eeb310, org.springframework.security.web.access.intercept.AuthorizationFilter@64f3ca6]
+12:59:45:1830 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+12:59:45:2290 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path ''
+12:59:45:2470 [main] INFO  in.dhirajrajput.JournalApplication - Started JournalApplication in 5.594 seconds (process running for 6.302)
+12:59:59:1190 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:59:59:1190 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+12:59:59:1210 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+12:59:59:6390 [http-nio-9090-exec-1] DEBUG i.m.c.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework
+13:00:51:4230 [main] INFO  in.dhirajrajput.JournalApplication - Starting JournalApplication using Java 17.0.12 with PID 20128 (D:\Spring Boot Project\journalApp\journalApp\target\classes started by Raj Dhiraj Kumar in D:\Spring Boot Project\journalApp\journalApp)
+13:00:51:4260 [main] INFO  in.dhirajrajput.JournalApplication - No active profile set, falling back to 1 default profile: "default"
+13:00:52:1990 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+13:00:52:2710 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 2 MongoDB repository interfaces.
+13:00:52:8810 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+13:00:52:8900 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+13:00:52:8920 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+13:00:52:8920 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+13:00:52:9560 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+13:00:52:9580 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1463 ms
+13:00:57:0930 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.HealthCheckController:
+	{GET [/public/health-check]}: healthCheck()
+	{POST [/public/create]}: createUser(User)
+13:00:57:1080 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.JournalEntryController:
+	{POST [/journal/create]}: createEntry(JournalEntry)
+	{DELETE [/journal/byId/{id}]}: deleteEntityById(ObjectId)
+	{PUT [/journal/byId/{id}]}: updateJournalEtity(ObjectId,JournalEntry)
+	{GET [/journal/list]}: getAllEntryOfUser()
+	{GET [/journal/byId/{id}]}: getEntityById(ObjectId)
+13:00:57:1190 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.UserController:
+	{DELETE [/user/byId/{id}]}: deleteEntityById(ObjectId)
+	{PUT [/user/update]}: updateJournalEtity(User)
+	{GET [/user/fetch-weather]}: getWeatherData()
+	{GET [/user/byId/{id}]}: getUserById(ObjectId)
+13:00:57:1330 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+13:00:57:1470 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+13:00:57:2510 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+13:00:57:3000 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@74c7522c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@77c23d90, org.springframework.security.web.context.SecurityContextHolderFilter@18715bb, org.springframework.security.web.header.HeaderWriterFilter@3ef2b8e5, org.springframework.web.filter.CorsFilter@6d17914a, org.springframework.security.web.authentication.logout.LogoutFilter@1a536164, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@60fc7f43, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2b7774d5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d284f15, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@49631cfb, org.springframework.security.web.access.ExceptionTranslationFilter@6e5f5478, org.springframework.security.web.access.intercept.AuthorizationFilter@27dbaa33]
+13:00:57:6820 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+13:00:57:8090 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path ''
+13:00:57:8290 [main] INFO  in.dhirajrajput.JournalApplication - Started JournalApplication in 7.059 seconds (process running for 7.907)
+13:00:58:4340 [http-nio-9090-exec-4] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:00:58:4350 [http-nio-9090-exec-4] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:00:58:4370 [http-nio-9090-exec-4] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+13:00:58:9370 [http-nio-9090-exec-4] DEBUG i.m.c.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework

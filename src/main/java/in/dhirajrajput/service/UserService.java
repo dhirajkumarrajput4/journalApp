@@ -34,8 +34,8 @@ public class UserService {
         }
     }
 
-    public User updateUser(User user) {
-        return this.userRepo.save(user);
+    public void updateUser(User user) {
+        this.userRepo.save(user);
     }
 
     public List<User> findAllUsers() {
