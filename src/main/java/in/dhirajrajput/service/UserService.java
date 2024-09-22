@@ -29,7 +29,7 @@ public class UserService {
             user.setRoles(Arrays.asList("USER"));
             return this.userRepo.save(user);
         } catch (Exception exception) {
-            log.info("Getting error while saving user for: {}", user.toString(), exception);
+            log.error("Getting error while saving user for: {}", user.toString());
             throw new RuntimeException("Getting error while saving the user" + exception.getMessage());
         }
     }
