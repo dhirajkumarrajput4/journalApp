@@ -12,6 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import in.dhirajrajput.entity.User;
 import in.dhirajrajput.repository.UserRepo;
+import in.dhirajrajput.response_request.UserDto;
 
 @SpringBootTest
 public class UserServiceTest {
@@ -29,7 +30,7 @@ public class UserServiceTest {
 
     @ParameterizedTest
     @ArgumentsSource(UserArgumentProvidor.class)
-    public void testSaveUsers(User user) {
+    public void testSaveUsers(UserDto user) {
         assertNotNull(userService.saveUser(user));
     }
 
