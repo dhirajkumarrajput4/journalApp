@@ -5041,3 +5041,198 @@ Consider defining a bean of type 'org.springframework.web.client.RestTemplate' i
 13:56:28:3610 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 13:56:28:3630 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
 13:56:28:8920 [http-nio-9090-exec-2] DEBUG i.m.c.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework
+13:19:49:0910 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [UserRepoImplTest]: using SpringBootContextLoader
+13:19:49:0940 [main] DEBUG o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [in.dhirajrajput.repository.UserRepoImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+13:19:49:0950 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [in.dhirajrajput.repository.UserRepoImplTest]: UserRepoImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:19:49:1090 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Using ContextCustomizerFactory implementations for test class [UserRepoImplTest]: [ImportsContextCustomizerFactory, ExcludeFilterContextCustomizerFactory, HttpGraphQlTesterContextCustomizerFactory, DuplicateJsonObjectContextCustomizerFactory, MockitoContextCustomizerFactory, TestRestTemplateContextCustomizerFactory, WebTestClientContextCustomizerFactory, OverrideAutoConfigurationContextCustomizerFactory, ObservabilityContextCustomizerFactory, TypeExcludeFiltersContextCustomizerFactory, PropertyMappingContextCustomizerFactory, WebDriverContextCustomizerFactory, MockServerContainerContextCustomizerFactory, DynamicPropertiesContextCustomizerFactory]
+13:19:49:1360 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [UserRepoImplTest]: [ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer, DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, WebDriverContextCustomizer]
+13:19:49:2620 [main] DEBUG o.s.c.a.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/home/el0369/Videos/SpringBoot/journalApp/target/classes/in/dhirajrajput/JournalApplication.class]
+13:19:49:2650 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration in.dhirajrajput.JournalApplication for test class in.dhirajrajput.repository.UserRepoImplTest
+13:19:49:4150 [main] DEBUG o.s.t.c.u.TestContextSpringFactoriesUtils - Skipping candidate TestExecutionListener [org.springframework.test.context.observation.MicrometerObservationRegistryTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: io.micrometer.context.ThreadLocalAccessor. MicrometerObservationRegistryTestExecutionListener requires io.micrometer:micrometer-observation:1.10.8 or higher and io.micrometer:context-propagation:1.0.3 or higher.
+13:19:49:4270 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [UserRepoImplTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
+13:19:49:4300 [main] DEBUG o.s.t.c.s.DirtiesContextBeforeModesTestExecutionListener - Before test class: class [UserRepoImplTest], class annotated with @DirtiesContext [false] with mode [null]
+13:19:49:9750 [main] INFO  i.d.repository.UserRepoImplTest - Starting UserRepoImplTest using Java 17.0.12 with PID 26925 (started by el0369 in /home/el0369/Videos/SpringBoot/journalApp)
+13:19:49:9770 [main] INFO  i.d.repository.UserRepoImplTest - No active profile set, falling back to 1 default profile: "default"
+13:19:51:2610 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+13:19:51:4120 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 137 ms. Found 2 MongoDB repository interfaces.
+13:19:54:2200 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.HealthCheckController:
+	{GET [/public/health-check]}: healthCheck()
+	{POST [/public/create]}: createUser(UserDto)
+13:19:54:2370 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.JournalEntryController:
+	{POST [/journal/create]}: createEntry(JournalEntryDto)
+	{GET [/journal/byId/{id}]}: getEntityById(ObjectId)
+	{DELETE [/journal/byId/{id}]}: deleteEntityById(ObjectId)
+	{PUT [/journal/byId/{id}]}: updateJournalEtity(ObjectId,JournalEntryDto)
+	{GET [/journal/list]}: getAllEntryOfUser()
+13:19:54:2450 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.UserController:
+	{DELETE [/user/byId/{id}]}: deleteEntityById(ObjectId)
+	{PUT [/user/update]}: updateJournalEtity(UserDto)
+	{GET [/user/byId/{id}]}: getUserById(ObjectId)
+	{GET [/user/fetch-weather]}: getWeatherData()
+13:19:54:2620 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+13:19:54:2920 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+13:19:54:5300 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+13:19:54:6390 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3a5b7d7e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@13cc31ae, org.springframework.security.web.context.SecurityContextHolderFilter@58e03769, org.springframework.security.web.header.HeaderWriterFilter@36d697ab, org.springframework.web.filter.CorsFilter@5bb7a59, org.springframework.security.web.authentication.logout.LogoutFilter@7db791df, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@259195fe, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6a51ae7c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@171aa66, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4bfa5eb9, org.springframework.security.web.access.ExceptionTranslationFilter@faec277, org.springframework.security.web.access.intercept.AuthorizationFilter@76af34b5]
+13:19:55:1030 [main] INFO  i.d.repository.UserRepoImplTest - Started UserRepoImplTest in 5.578 seconds (process running for 6.971)
+13:20:18:3560 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [UserRepoImplTest]: using SpringBootContextLoader
+13:20:18:3600 [main] DEBUG o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [in.dhirajrajput.repository.UserRepoImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+13:20:18:3620 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [in.dhirajrajput.repository.UserRepoImplTest]: UserRepoImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:20:18:3780 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Using ContextCustomizerFactory implementations for test class [UserRepoImplTest]: [ImportsContextCustomizerFactory, ExcludeFilterContextCustomizerFactory, HttpGraphQlTesterContextCustomizerFactory, DuplicateJsonObjectContextCustomizerFactory, MockitoContextCustomizerFactory, TestRestTemplateContextCustomizerFactory, WebTestClientContextCustomizerFactory, OverrideAutoConfigurationContextCustomizerFactory, ObservabilityContextCustomizerFactory, TypeExcludeFiltersContextCustomizerFactory, PropertyMappingContextCustomizerFactory, WebDriverContextCustomizerFactory, MockServerContainerContextCustomizerFactory, DynamicPropertiesContextCustomizerFactory]
+13:20:18:4040 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [UserRepoImplTest]: [ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer, DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, WebDriverContextCustomizer]
+13:20:18:5560 [main] DEBUG o.s.c.a.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/home/el0369/Videos/SpringBoot/journalApp/target/classes/in/dhirajrajput/JournalApplication.class]
+13:20:18:5580 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration in.dhirajrajput.JournalApplication for test class in.dhirajrajput.repository.UserRepoImplTest
+13:20:18:7730 [main] DEBUG o.s.t.c.u.TestContextSpringFactoriesUtils - Skipping candidate TestExecutionListener [org.springframework.test.context.observation.MicrometerObservationRegistryTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: io.micrometer.context.ThreadLocalAccessor. MicrometerObservationRegistryTestExecutionListener requires io.micrometer:micrometer-observation:1.10.8 or higher and io.micrometer:context-propagation:1.0.3 or higher.
+13:20:18:7890 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [UserRepoImplTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
+13:20:18:7910 [main] DEBUG o.s.t.c.s.DirtiesContextBeforeModesTestExecutionListener - Before test class: class [UserRepoImplTest], class annotated with @DirtiesContext [false] with mode [null]
+13:20:19:5050 [main] INFO  i.d.repository.UserRepoImplTest - Starting UserRepoImplTest using Java 17.0.12 with PID 27140 (started by el0369 in /home/el0369/Videos/SpringBoot/journalApp)
+13:20:19:5070 [main] INFO  i.d.repository.UserRepoImplTest - No active profile set, falling back to 1 default profile: "default"
+13:20:20:9090 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+13:20:21:0480 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 124 ms. Found 2 MongoDB repository interfaces.
+13:20:24:2910 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.HealthCheckController:
+	{GET [/public/health-check]}: healthCheck()
+	{POST [/public/create]}: createUser(UserDto)
+13:20:24:3070 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.JournalEntryController:
+	{POST [/journal/create]}: createEntry(JournalEntryDto)
+	{DELETE [/journal/byId/{id}]}: deleteEntityById(ObjectId)
+	{PUT [/journal/byId/{id}]}: updateJournalEtity(ObjectId,JournalEntryDto)
+	{GET [/journal/list]}: getAllEntryOfUser()
+	{GET [/journal/byId/{id}]}: getEntityById(ObjectId)
+13:20:24:3160 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.UserController:
+	{DELETE [/user/byId/{id}]}: deleteEntityById(ObjectId)
+	{PUT [/user/update]}: updateJournalEtity(UserDto)
+	{GET [/user/byId/{id}]}: getUserById(ObjectId)
+	{GET [/user/fetch-weather]}: getWeatherData()
+13:20:24:3400 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+13:20:24:3610 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+13:20:24:5600 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+13:20:24:6560 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@62faf77, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f39269d, org.springframework.security.web.context.SecurityContextHolderFilter@2969a9a6, org.springframework.security.web.header.HeaderWriterFilter@171aa66, org.springframework.web.filter.CorsFilter@6e321d9d, org.springframework.security.web.authentication.logout.LogoutFilter@7e31062c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4bfa5eb9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6182ffef, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@49e479da, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@754de353, org.springframework.security.web.access.ExceptionTranslationFilter@699e0bf0, org.springframework.security.web.access.intercept.AuthorizationFilter@3ea75b05]
+13:20:25:2350 [main] INFO  i.d.repository.UserRepoImplTest - Started UserRepoImplTest in 6.332 seconds (process running for 8.017)
+16:21:37:5310 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [MailServiceTest]: using SpringBootContextLoader
+16:21:37:5350 [main] DEBUG o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [in.dhirajrajput.service.MailServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+16:21:37:5360 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [in.dhirajrajput.service.MailServiceTest]: MailServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:21:37:5460 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Using ContextCustomizerFactory implementations for test class [MailServiceTest]: [ImportsContextCustomizerFactory, ExcludeFilterContextCustomizerFactory, HttpGraphQlTesterContextCustomizerFactory, DuplicateJsonObjectContextCustomizerFactory, MockitoContextCustomizerFactory, TestRestTemplateContextCustomizerFactory, WebTestClientContextCustomizerFactory, OverrideAutoConfigurationContextCustomizerFactory, ObservabilityContextCustomizerFactory, TypeExcludeFiltersContextCustomizerFactory, PropertyMappingContextCustomizerFactory, WebDriverContextCustomizerFactory, MockServerContainerContextCustomizerFactory, DynamicPropertiesContextCustomizerFactory]
+16:21:37:5640 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [MailServiceTest]: [ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer, DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, WebDriverContextCustomizer]
+16:21:37:6740 [main] DEBUG o.s.c.a.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/home/el0369/Videos/SpringBoot/journalApp/target/classes/in/dhirajrajput/JournalApplication.class]
+16:21:37:6760 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration in.dhirajrajput.JournalApplication for test class in.dhirajrajput.service.MailServiceTest
+16:21:37:7770 [main] DEBUG o.s.t.c.u.TestContextSpringFactoriesUtils - Skipping candidate TestExecutionListener [org.springframework.test.context.observation.MicrometerObservationRegistryTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: io.micrometer.context.ThreadLocalAccessor. MicrometerObservationRegistryTestExecutionListener requires io.micrometer:micrometer-observation:1.10.8 or higher and io.micrometer:context-propagation:1.0.3 or higher.
+16:21:37:7830 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [MailServiceTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
+16:21:37:7860 [main] DEBUG o.s.t.c.s.DirtiesContextBeforeModesTestExecutionListener - Before test class: class [MailServiceTest], class annotated with @DirtiesContext [false] with mode [null]
+16:21:38:1770 [main] INFO  i.d.service.MailServiceTest - Starting MailServiceTest using Java 17.0.12 with PID 86459 (started by el0369 in /home/el0369/Videos/SpringBoot/journalApp)
+16:21:38:1780 [main] INFO  i.d.service.MailServiceTest - No active profile set, falling back to 1 default profile: "default"
+16:21:39:0530 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+16:21:39:1370 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 77 ms. Found 2 MongoDB repository interfaces.
+16:21:41:3100 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.HealthCheckController:
+	{POST [/public/create]}: createUser(UserDto)
+	{GET [/public/health-check]}: healthCheck()
+16:21:41:3190 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.JournalEntryController:
+	{POST [/journal/create]}: createEntry(JournalEntryDto)
+	{DELETE [/journal/byId/{id}]}: deleteEntityById(ObjectId)
+	{PUT [/journal/byId/{id}]}: updateJournalEtity(ObjectId,JournalEntryDto)
+	{GET [/journal/list]}: getAllEntryOfUser()
+	{GET [/journal/byId/{id}]}: getEntityById(ObjectId)
+16:21:41:3250 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.UserController:
+	{DELETE [/user/byId/{id}]}: deleteEntityById(ObjectId)
+	{PUT [/user/update]}: updateJournalEtity(UserDto)
+	{GET [/user/byId/{id}]}: getUserById(ObjectId)
+	{GET [/user/fetch-weather]}: getWeatherData()
+16:21:41:3350 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+16:21:41:3490 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+16:21:41:5030 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+16:21:41:5570 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@66715ca9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@577f9dfd, org.springframework.security.web.context.SecurityContextHolderFilter@5731caaf, org.springframework.security.web.header.HeaderWriterFilter@59baf2c7, org.springframework.web.filter.CorsFilter@520a95ff, org.springframework.security.web.authentication.logout.LogoutFilter@5c9a4f3b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@502c2278, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@67e6eb52, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e8b8f0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@30afb481, org.springframework.security.web.access.ExceptionTranslationFilter@7ab33ca8, org.springframework.security.web.access.intercept.AuthorizationFilter@6dece1f9]
+16:21:41:9290 [main] INFO  i.d.service.MailServiceTest - Started MailServiceTest in 4.096 seconds (process running for 5.127)
+16:22:42:4880 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [MailServiceTest]: using SpringBootContextLoader
+16:22:42:4910 [main] DEBUG o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [in.dhirajrajput.service.MailServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+16:22:42:4920 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [in.dhirajrajput.service.MailServiceTest]: MailServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:22:42:5040 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Using ContextCustomizerFactory implementations for test class [MailServiceTest]: [ImportsContextCustomizerFactory, ExcludeFilterContextCustomizerFactory, HttpGraphQlTesterContextCustomizerFactory, DuplicateJsonObjectContextCustomizerFactory, MockitoContextCustomizerFactory, TestRestTemplateContextCustomizerFactory, WebTestClientContextCustomizerFactory, OverrideAutoConfigurationContextCustomizerFactory, ObservabilityContextCustomizerFactory, TypeExcludeFiltersContextCustomizerFactory, PropertyMappingContextCustomizerFactory, WebDriverContextCustomizerFactory, MockServerContainerContextCustomizerFactory, DynamicPropertiesContextCustomizerFactory]
+16:22:42:5220 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [MailServiceTest]: [ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer, DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, WebDriverContextCustomizer]
+16:22:42:6260 [main] DEBUG o.s.c.a.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/home/el0369/Videos/SpringBoot/journalApp/target/classes/in/dhirajrajput/JournalApplication.class]
+16:22:42:6280 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration in.dhirajrajput.JournalApplication for test class in.dhirajrajput.service.MailServiceTest
+16:22:42:7490 [main] DEBUG o.s.t.c.u.TestContextSpringFactoriesUtils - Skipping candidate TestExecutionListener [org.springframework.test.context.observation.MicrometerObservationRegistryTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: io.micrometer.context.ThreadLocalAccessor. MicrometerObservationRegistryTestExecutionListener requires io.micrometer:micrometer-observation:1.10.8 or higher and io.micrometer:context-propagation:1.0.3 or higher.
+16:22:42:7590 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [MailServiceTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
+16:22:42:7610 [main] DEBUG o.s.t.c.s.DirtiesContextBeforeModesTestExecutionListener - Before test class: class [MailServiceTest], class annotated with @DirtiesContext [false] with mode [null]
+16:22:43:2180 [main] INFO  i.d.service.MailServiceTest - Starting MailServiceTest using Java 17.0.12 with PID 86881 (started by el0369 in /home/el0369/Videos/SpringBoot/journalApp)
+16:22:43:2200 [main] INFO  i.d.service.MailServiceTest - No active profile set, falling back to 1 default profile: "default"
+16:22:44:0620 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+16:22:44:1350 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 2 MongoDB repository interfaces.
+16:22:46:3430 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.HealthCheckController:
+	{POST [/public/create]}: createUser(UserDto)
+	{GET [/public/health-check]}: healthCheck()
+16:22:46:3530 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.JournalEntryController:
+	{POST [/journal/create]}: createEntry(JournalEntryDto)
+	{DELETE [/journal/byId/{id}]}: deleteEntityById(ObjectId)
+	{PUT [/journal/byId/{id}]}: updateJournalEtity(ObjectId,JournalEntryDto)
+	{GET [/journal/list]}: getAllEntryOfUser()
+	{GET [/journal/byId/{id}]}: getEntityById(ObjectId)
+16:22:46:3570 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.UserController:
+	{DELETE [/user/byId/{id}]}: deleteEntityById(ObjectId)
+	{PUT [/user/update]}: updateJournalEtity(UserDto)
+	{GET [/user/byId/{id}]}: getUserById(ObjectId)
+	{GET [/user/fetch-weather]}: getWeatherData()
+16:22:46:3650 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+16:22:46:3780 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+16:22:46:5750 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+16:22:46:6370 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5c573229, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@77ecdc2b, org.springframework.security.web.context.SecurityContextHolderFilter@5ad57e90, org.springframework.security.web.header.HeaderWriterFilter@59933644, org.springframework.web.filter.CorsFilter@714f1a44, org.springframework.security.web.authentication.logout.LogoutFilter@657b3b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@577f9dfd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4ad896f7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@c318864, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3c09a350, org.springframework.security.web.access.ExceptionTranslationFilter@7a2a7492, org.springframework.security.web.access.intercept.AuthorizationFilter@5c5c7cc4]
+16:22:47:0090 [main] INFO  i.d.service.MailServiceTest - Started MailServiceTest in 4.191 seconds (process running for 5.28)
+16:23:53:8550 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [MailServiceTest]: using SpringBootContextLoader
+16:23:53:8620 [main] DEBUG o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [in.dhirajrajput.service.MailServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+16:23:53:8630 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [in.dhirajrajput.service.MailServiceTest]: MailServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:23:53:8990 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Using ContextCustomizerFactory implementations for test class [MailServiceTest]: [ImportsContextCustomizerFactory, ExcludeFilterContextCustomizerFactory, HttpGraphQlTesterContextCustomizerFactory, DuplicateJsonObjectContextCustomizerFactory, MockitoContextCustomizerFactory, TestRestTemplateContextCustomizerFactory, WebTestClientContextCustomizerFactory, OverrideAutoConfigurationContextCustomizerFactory, ObservabilityContextCustomizerFactory, TypeExcludeFiltersContextCustomizerFactory, PropertyMappingContextCustomizerFactory, WebDriverContextCustomizerFactory, MockServerContainerContextCustomizerFactory, DynamicPropertiesContextCustomizerFactory]
+16:23:53:9270 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [MailServiceTest]: [ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer, DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, WebDriverContextCustomizer]
+16:23:54:0300 [main] DEBUG o.s.c.a.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/home/el0369/Videos/SpringBoot/journalApp/target/classes/in/dhirajrajput/JournalApplication.class]
+16:23:54:0330 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration in.dhirajrajput.JournalApplication for test class in.dhirajrajput.service.MailServiceTest
+16:23:54:1390 [main] DEBUG o.s.t.c.u.TestContextSpringFactoriesUtils - Skipping candidate TestExecutionListener [org.springframework.test.context.observation.MicrometerObservationRegistryTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: io.micrometer.context.ThreadLocalAccessor. MicrometerObservationRegistryTestExecutionListener requires io.micrometer:micrometer-observation:1.10.8 or higher and io.micrometer:context-propagation:1.0.3 or higher.
+16:23:54:1450 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [MailServiceTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
+16:23:54:1470 [main] DEBUG o.s.t.c.s.DirtiesContextBeforeModesTestExecutionListener - Before test class: class [MailServiceTest], class annotated with @DirtiesContext [false] with mode [null]
+16:23:54:4810 [main] INFO  i.d.service.MailServiceTest - Starting MailServiceTest using Java 17.0.12 with PID 87402 (started by el0369 in /home/el0369/Videos/SpringBoot/journalApp)
+16:23:54:4840 [main] INFO  i.d.service.MailServiceTest - No active profile set, falling back to 1 default profile: "default"
+16:23:55:3130 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+16:23:55:3790 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58 ms. Found 2 MongoDB repository interfaces.
+16:23:57:2530 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.HealthCheckController:
+	{GET [/public/health-check]}: healthCheck()
+	{POST [/public/create]}: createUser(UserDto)
+16:23:57:2600 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.JournalEntryController:
+	{POST [/journal/create]}: createEntry(JournalEntryDto)
+	{GET [/journal/byId/{id}]}: getEntityById(ObjectId)
+	{DELETE [/journal/byId/{id}]}: deleteEntityById(ObjectId)
+	{PUT [/journal/byId/{id}]}: updateJournalEtity(ObjectId,JournalEntryDto)
+	{GET [/journal/list]}: getAllEntryOfUser()
+16:23:57:2640 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.UserController:
+	{GET [/user/byId/{id}]}: getUserById(ObjectId)
+	{GET [/user/fetch-weather]}: getWeatherData()
+	{DELETE [/user/byId/{id}]}: deleteEntityById(ObjectId)
+	{PUT [/user/update]}: updateJournalEtity(UserDto)
+16:23:57:2740 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+16:23:57:2860 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+16:23:57:4190 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+16:23:57:4750 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1214d23c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@41582899, org.springframework.security.web.context.SecurityContextHolderFilter@21e484b, org.springframework.security.web.header.HeaderWriterFilter@33e50ff2, org.springframework.web.filter.CorsFilter@595814a1, org.springframework.security.web.authentication.logout.LogoutFilter@62108cd3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6c27e700, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a2a7492, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6326c5ec, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7de5871d, org.springframework.security.web.access.ExceptionTranslationFilter@5b665a30, org.springframework.security.web.access.intercept.AuthorizationFilter@2cea921a]
+16:23:57:9230 [main] INFO  i.d.service.MailServiceTest - Started MailServiceTest in 3.722 seconds (process running for 4.932)

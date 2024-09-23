@@ -10,7 +10,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import in.dhirajrajput.entity.User;
 import in.dhirajrajput.repository.UserRepo;
 import in.dhirajrajput.response_request.UserDto;
 
