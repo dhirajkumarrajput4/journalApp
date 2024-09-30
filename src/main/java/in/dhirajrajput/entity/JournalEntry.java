@@ -5,6 +5,8 @@ import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import in.dhirajrajput.enums.Sentiment;
+
 import java.time.LocalDateTime;
 
 @Getter
@@ -19,6 +21,7 @@ public class JournalEntry {
     private String title;
     private String content;
     private LocalDateTime date;
+    private Sentiment sentiment;
 
 
 }
