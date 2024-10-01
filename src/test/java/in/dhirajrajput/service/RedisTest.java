@@ -8,18 +8,20 @@ import org.springframework.data.redis.core.RedisTemplate;
 @SpringBootTest
 public class RedisTest {
 
+    @SuppressWarnings("rawtypes")
     @Autowired
     private RedisTemplate redisTemplate;
 
+    @SuppressWarnings("unchecked")
     @Test
-    void testResitTemplate(){
+    void testResitTemplate() {
 
         redisTemplate.opsForValue().set("email", "dhirajkumarrajput4@gmail.com");
 
-        Object email =redisTemplate.opsForValue().get("email");
+        Object email = redisTemplate.opsForValue().get("email");
 
-        System.out.println(email.toString());
+        System.out.println(email);
 
     }
-    
+
 }
