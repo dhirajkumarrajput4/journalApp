@@ -1,9 +1,12 @@
 package in.dhirajrajput.response_request;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import lombok.ToString;
+
 import java.util.List;
 
 @Data
+@ToString
 public class WeatherResponse {
 
     @JsonProperty("request")
@@ -16,6 +19,7 @@ public class WeatherResponse {
     private Current current;
 
     @Data
+    @ToString
     public static class Request {
         @JsonProperty("type")
         private String type;
@@ -31,6 +35,7 @@ public class WeatherResponse {
     }
 
     @Data
+    @ToString
     public static class Location {
         @JsonProperty("name")
         private String name;
@@ -61,6 +66,7 @@ public class WeatherResponse {
     }
 
     @Data
+    @ToString
     public static class Current {
         @JsonProperty("observation_time")
         private String observationTime;

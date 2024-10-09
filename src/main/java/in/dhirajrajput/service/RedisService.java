@@ -14,23 +14,22 @@ public class RedisService {
 
     @Autowired
     private RedisTemplate redisTemplate;
-
     public <T> T get(String key, Class<T> entityClass) {
         try {
-            Object o = redisTemplate.opsForValue().get(key);
-            ObjectMapper mapper = new ObjectMapper();
-            return mapper.readValue(o.toString(), entityClass);
+            // RedisTemplate will automatically deserialize the value into the specified type
+            return (T) redisTemplate.opsForValue().get(key);
         } catch (Exception e) {
             log.error("Exception", e);
             return null;
         }
     }
+    
 
     public void set(String key, Object o, Long ttl) {
         try {
-            redisTemplate.opsForValue().set(key, o, ttl, TimeUnit.SECONDS);
+            redisTemplate.opsForValue().set(key, o,ttl,TimeUnit.SECONDS);
         } catch (Exception e) {
-            log.error("Exception", e);
+            log.error("Exception When set in Redis ", e);
         }
     }
 }
