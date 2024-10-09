@@ -28,4 +28,6 @@ public class JournalApplication {
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
+
+    
 }

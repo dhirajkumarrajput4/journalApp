@@ -8,11 +8,10 @@ import org.springframework.data.redis.core.RedisTemplate;
 @SpringBootTest
 public class RedisTest {
 
-    @SuppressWarnings("rawtypes")
+   
     @Autowired
     private RedisTemplate redisTemplate;
 
-    @SuppressWarnings("unchecked")
     @Test
     void testResitTemplate() {
 
