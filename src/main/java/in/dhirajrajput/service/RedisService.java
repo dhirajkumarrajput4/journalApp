@@ -5,6 +5,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.util.concurrent.TimeUnit;
 import lombok.extern.slf4j.Slf4j;
 
@@ -16,8 +17,9 @@ public class RedisService {
     private RedisTemplate redisTemplate;
     public <T> T get(String key, Class<T> entityClass) {
         try {
-            // RedisTemplate will automatically deserialize the value into the specified type
-            return (T) redisTemplate.opsForValue().get(key);
+           Object o = redisTemplate.opsForValue().get(key);
+           ObjectMapper mapper=new ObjectMapper();
+           return mapper.readValue(o.toString(), entityClass);
         } catch (Exception e) {
             log.error("Exception", e);
             return null;
@@ -27,7 +29,10 @@ public class RedisService {
 
     public void set(String key, Object o, Long ttl) {
         try {
-            redisTemplate.opsForValue().set(key, o,ttl,TimeUnit.SECONDS);
+            
+            ObjectMapper objectMapper=new ObjectMapper();
+            String jsonvalue=objectMapper.writeValueAsString(o);
+            redisTemplate.opsForValue().set(key, jsonvalue,ttl,TimeUnit.SECONDS);
         } catch (Exception e) {
             log.error("Exception When set in Redis ", e);
         }

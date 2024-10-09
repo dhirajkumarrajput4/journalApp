@@ -11,32 +11,16 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.jsontype.BasicPolymorphicTypeValidator;
 import com.fasterxml.jackson.databind.jsontype.PolymorphicTypeValidator;
 
-// @Configuration
+@Configuration
 public class RedisConfig {
-    // @Bean
-    // public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory connectionFactory) {
-    //     RedisTemplate<String, Object> template = new RedisTemplate<>();
-    //     template.setConnectionFactory(connectionFactory);
+    @Bean
+    public RedisTemplate redisTemplate(RedisConnectionFactory connectionFactory) {
 
-    //     // Use String serializer for keys
-    //     template.setKeySerializer(new StringRedisSerializer());
+        RedisTemplate redisTemplate = new RedisTemplate<>();
+        redisTemplate.setConnectionFactory(connectionFactory);
+        redisTemplate.setKeySerializer(new StringRedisSerializer());
+        redisTemplate.setValueSerializer(new StringRedisSerializer());
 
-    //     // Use Jackson2JsonRedisSerializer for values
-    //     Jackson2JsonRedisSerializer<Object> serializer = new Jackson2JsonRedisSerializer<>(Object.class);
-        
-    //     // Optional: Setup ObjectMapper for handling polymorphic types
-    //     ObjectMapper objectMapper = new ObjectMapper();
-    //     PolymorphicTypeValidator ptv = BasicPolymorphicTypeValidator.builder().build();
-    //     objectMapper.activateDefaultTyping(ptv, ObjectMapper.DefaultTyping.NON_FINAL);
-
-    //     serializer.setObjectMapper(objectMapper);
-    //     template.setValueSerializer(serializer);
-        
-    //     // You can also set it for hash key/value if needed
-    //     template.setHashKeySerializer(new StringRedisSerializer());
-    //     template.setHashValueSerializer(serializer);
-
-    //     template.afterPropertiesSet();
-    //     return template;
-    // }
+        return redisTemplate;
+    }
 }

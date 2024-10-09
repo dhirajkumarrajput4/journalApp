@@ -11488,3 +11488,700 @@ Caused by: java.lang.IllegalArgumentException: DefaultSerializer requires a Seri
 	at org.springframework.core.serializer.Serializer.serializeToByteArray(Serializer.java:56)
 	at org.springframework.core.serializer.support.SerializingConverter.convert(SerializingConverter.java:60)
 	... 104 common frames omitted
+15:46:50:9810 [main] INFO  in.dhirajrajput.JournalApplication - Starting JournalApplication using Java 17.0.12 with PID 204483 (/home/el0369/Videos/SpringBoot/journalApp/target/classes started by el0369 in /home/el0369/Videos/SpringBoot/journalApp)
+15:46:50:9850 [main] INFO  in.dhirajrajput.JournalApplication - No active profile set, falling back to 1 default profile: "default"
+15:46:52:0940 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+15:46:52:0960 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+15:46:52:2990 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 195 ms. Found 2 MongoDB repository interfaces.
+15:46:52:3330 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+15:46:52:3360 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+15:46:52:4240 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface in.dhirajrajput.repository.JournalEntryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+15:46:52:4310 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface in.dhirajrajput.repository.UserRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+15:46:52:4320 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 0 Redis repository interfaces.
+15:46:53:2310 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+15:46:53:2460 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+15:46:53:2500 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:46:53:2510 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+15:46:53:3600 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:46:53:3620 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2281 ms
+15:46:55:5580 [main] DEBUG i.n.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework
+15:46:55:5660 [main] DEBUG i.l.c.r.AddressResolverGroupProvider - Starting without optional netty's non-blocking DNS resolver library
+15:46:55:5720 [main] DEBUG i.l.c.r.DefaultClientResources - -Dio.netty.eventLoopThreads: 8
+15:46:55:5880 [main] DEBUG i.l.c.r.DefaultEventLoopGroupProvider - Creating executor io.netty.util.concurrent.DefaultEventExecutorGroup
+15:46:55:6430 [main] DEBUG i.n.u.concurrent.GlobalEventExecutor - -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+15:46:55:6570 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+15:46:55:6580 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+15:46:55:6750 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+15:46:55:6770 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+15:46:55:6840 [main] DEBUG i.n.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@28831d69
+15:46:55:7200 [main] DEBUG i.n.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+15:46:55:7210 [main] DEBUG i.n.util.internal.PlatformDependent0 - Java version: 17
+15:46:55:7230 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+15:46:55:7240 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+15:46:55:7250 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.storeFence: available
+15:46:55:7270 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+15:46:55:7290 [main] DEBUG i.n.util.internal.PlatformDependent0 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
+15:46:55:7310 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+15:46:55:7340 [main] DEBUG i.n.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @163cc7b8
+15:46:55:7370 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, {int,long}): unavailable
+15:46:55:7370 [main] DEBUG i.n.util.internal.PlatformDependent - sun.misc.Unsafe: available
+15:46:55:7380 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+15:46:55:7380 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+15:46:55:7400 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+15:46:55:7410 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+15:46:55:7430 [main] DEBUG io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+15:46:55:7440 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+15:46:55:7690 [main] DEBUG i.n.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+15:46:55:7890 [main] DEBUG reactor.util.Loggers - Using Slf4j logging framework
+15:46:55:8000 [main] DEBUG i.l.c.event.jfr.EventRecorderHolder - Starting with JFR support
+15:46:55:8180 [main] DEBUG i.l.c.r.DefaultClientResources - LatencyUtils/HdrUtils are not available, metrics are disabled
+15:46:56:2940 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.HealthCheckController:
+	{GET [/public/health-check]}: healthCheck()
+	{POST [/public/create]}: createUser(UserDto)
+15:46:56:3030 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.JournalEntryController:
+	{POST [/journal/create]}: createEntry(JournalEntryDto)
+	{GET [/journal/list]}: getAllEntryOfUser()
+	{GET [/journal/byId/{id}]}: getEntityById(ObjectId)
+	{DELETE [/journal/byId/{id}]}: deleteEntityById(ObjectId)
+	{PUT [/journal/byId/{id}]}: updateJournalEtity(ObjectId,JournalEntryDto)
+15:46:56:3090 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.UserController:
+	{DELETE [/user/byId/{id}]}: deleteEntityById(ObjectId)
+	{PUT [/user/update]}: updateJournalEtity(UserDto)
+	{GET [/user/byId/{id}]}: getUserById(ObjectId)
+	{GET [/user/fetch-weather]}: getWeatherData()
+15:46:56:3230 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+15:46:56:3570 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+15:46:56:5270 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+15:46:56:6210 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@117fb9ba, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2b1d1a5, org.springframework.security.web.context.SecurityContextHolderFilter@3516b881, org.springframework.security.web.header.HeaderWriterFilter@42238078, org.springframework.web.filter.CorsFilter@41e7a544, org.springframework.security.web.authentication.logout.LogoutFilter@6f655dbd, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1fa18f87, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e3c36d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@397a10df, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3b66ac74, org.springframework.security.web.access.ExceptionTranslationFilter@4ffa078d, org.springframework.security.web.access.intercept.AuthorizationFilter@1fe05fff]
+15:46:56:9850 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+15:46:57:0140 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path ''
+15:46:57:0420 [main] INFO  in.dhirajrajput.JournalApplication - Started JournalApplication in 6.598 seconds (process running for 7.369)
+15:47:03:4950 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:47:03:4960 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:47:03:4970 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+15:47:06:0160 [http-nio-9090-exec-1] DEBUG io.lettuce.core.RedisClient - Trying to get a Redis connection for: redis://default:********************************@redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com:11544
+15:47:06:2910 [http-nio-9090-exec-1] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 16
+15:47:06:2920 [http-nio-9090-exec-1] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 16
+15:47:06:2920 [http-nio-9090-exec-1] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+15:47:06:2930 [http-nio-9090-exec-1] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 9
+15:47:06:2930 [http-nio-9090-exec-1] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 4194304
+15:47:06:2940 [http-nio-9090-exec-1] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+15:47:06:2940 [http-nio-9090-exec-1] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+15:47:06:2940 [http-nio-9090-exec-1] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+15:47:06:2940 [http-nio-9090-exec-1] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+15:47:06:2950 [http-nio-9090-exec-1] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+15:47:06:2950 [http-nio-9090-exec-1] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: false
+15:47:06:2950 [http-nio-9090-exec-1] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+15:47:06:3120 [http-nio-9090-exec-1] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled
+15:47:06:3130 [http-nio-9090-exec-1] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
+15:47:06:3130 [http-nio-9090-exec-1] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+15:47:06:3190 [http-nio-9090-exec-1] DEBUG i.l.core.resource.KqueueProvider - Starting without optional kqueue library
+15:47:06:3230 [http-nio-9090-exec-1] DEBUG i.l.core.resource.IOUringProvider - Starting without optional io_uring library
+15:47:06:3260 [http-nio-9090-exec-1] DEBUG i.l.core.resource.EpollProvider - Starting without optional epoll library
+15:47:06:3350 [http-nio-9090-exec-1] DEBUG i.l.c.r.DefaultEventLoopGroupProvider - Allocating executor io.netty.channel.nio.NioEventLoopGroup
+15:47:06:3350 [http-nio-9090-exec-1] DEBUG i.l.c.r.DefaultEventLoopGroupProvider - Creating executor io.netty.channel.nio.NioEventLoopGroup
+15:47:06:3370 [http-nio-9090-exec-1] DEBUG i.n.c.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 16
+15:47:06:3460 [http-nio-9090-exec-1] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
+15:47:06:3470 [http-nio-9090-exec-1] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+15:47:06:3520 [http-nio-9090-exec-1] DEBUG i.l.c.r.DefaultEventLoopGroupProvider - Adding reference to io.netty.channel.nio.NioEventLoopGroup@76ee4923, existing ref count 0
+15:47:06:4930 [http-nio-9090-exec-1] DEBUG io.lettuce.core.RedisClient - Resolved SocketAddress redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/<unresolved>:11544 using redis://default:********************************@redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com:11544
+15:47:06:4940 [http-nio-9090-exec-1] DEBUG io.lettuce.core.AbstractRedisClient - Connecting to Redis at redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/<unresolved>:11544
+15:47:06:4990 [http-nio-9090-exec-1] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.processId: 204483 (auto-detected)
+15:47:06:5030 [http-nio-9090-exec-1] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv4Stack: false
+15:47:06:5040 [http-nio-9090-exec-1] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv6Addresses: false
+15:47:06:5070 [http-nio-9090-exec-1] DEBUG i.netty.util.NetUtilInitializations - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+15:47:06:5090 [http-nio-9090-exec-1] DEBUG io.netty.util.NetUtil - /proc/sys/net/core/somaxconn: 4096
+15:47:06:5120 [http-nio-9090-exec-1] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.machineId: 00:e0:4c:ff:fe:68:00:8d (auto-detected)
+15:47:06:5490 [http-nio-9090-exec-1] DEBUG i.n.b.ChannelInitializerExtensions - -Dio.netty.bootstrap.extensions: null
+15:47:06:6690 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xd0a49c33, [id: 0x4f42a8b9] (inactive), epid=0x1, chid=0x1] channelRegistered()
+15:47:06:6750 [lettuce-nioEventLoop-4-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096
+15:47:06:6760 [lettuce-nioEventLoop-4-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8
+15:47:06:6760 [lettuce-nioEventLoop-4-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.chunkSize: 32
+15:47:06:6760 [lettuce-nioEventLoop-4-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.blocking: false
+15:47:06:6770 [lettuce-nioEventLoop-4-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.batchFastThreadLocalOnly: true
+15:47:06:6900 [lettuce-nioEventLoop-4-1] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkAccessible: true
+15:47:06:6900 [lettuce-nioEventLoop-4-1] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkBounds: true
+15:47:06:6910 [lettuce-nioEventLoop-4-1] DEBUG i.n.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@789e8340
+15:47:06:7530 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xd0a49c33, /192.168.1.174:48628 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] write(ctx, AsyncCommand [type=HELLO, output=GenericMapOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+15:47:06:7590 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandEncoder - [channel=0xd0a49c33, /192.168.1.174:48628 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544] writing command AsyncCommand [type=HELLO, output=GenericMapOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:47:06:7890 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xd0a49c33, /192.168.1.174:48628 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Received: 704 bytes, 1 commands in the stack
+15:47:06:7900 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xd0a49c33, /192.168.1.174:48628 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Stack contains: 1 commands
+15:47:06:8050 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.RedisStateMachine - Decode done, empty stack: true
+15:47:06:8060 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xd0a49c33, /192.168.1.174:48628 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Completing command AsyncCommand [type=HELLO, output=GenericMapOutput [output={server=redis, version=7.2.3, proto=3, id=7, mode=cluster, role=master, modules=name, ReJSON=ver, 20613=path, /enterprise-managed=args, name=searchlight, ver=20819, path=/enterprise-managed, args=FORK_GC_CLEAN_THRESHOLD, timeseries=ver, 11015=path, 100=MAXAGGREGATERESULTS, 10000=MT_MODE, MT_MODE_ONLY_ON_OPERATIONS=WORKER_THREADS}, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:47:06:8100 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xd0a49c33, /192.168.1.174:48628 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] write(ctx, [AsyncCommand [type=CLIENT, output=StatusOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command], AsyncCommand [type=CLIENT, output=StatusOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]], promise)
+15:47:06:8110 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandEncoder - [channel=0xd0a49c33, /192.168.1.174:48628 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544] writing command AsyncCommand [type=CLIENT, output=StatusOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:47:06:8130 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandEncoder - [channel=0xd0a49c33, /192.168.1.174:48628 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544] writing command AsyncCommand [type=CLIENT, output=StatusOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:47:06:8380 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xd0a49c33, /192.168.1.174:48628 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Received: 10 bytes, 2 commands in the stack
+15:47:06:8380 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xd0a49c33, /192.168.1.174:48628 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Stack contains: 2 commands
+15:47:06:8390 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.RedisStateMachine - Decode done, empty stack: true
+15:47:06:8390 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xd0a49c33, /192.168.1.174:48628 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Completing command AsyncCommand [type=CLIENT, output=StatusOutput [output=OK, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:47:06:8390 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xd0a49c33, /192.168.1.174:48628 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Stack contains: 1 commands
+15:47:06:8400 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.RedisStateMachine - Decode done, empty stack: true
+15:47:06:8400 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xd0a49c33, /192.168.1.174:48628 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Completing command AsyncCommand [type=CLIENT, output=StatusOutput [output=OK, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:47:06:8400 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xd0a49c33, /192.168.1.174:48628 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] channelActive()
+15:47:06:8410 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.DefaultEndpoint - [channel=0xd0a49c33, /192.168.1.174:48628 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1] activateEndpointAndExecuteBufferedCommands 0 command(s) buffered
+15:47:06:8410 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.DefaultEndpoint - [channel=0xd0a49c33, /192.168.1.174:48628 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1] activating endpoint
+15:47:06:8420 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.DefaultEndpoint - [channel=0xd0a49c33, /192.168.1.174:48628 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1] flushCommands()
+15:47:06:8430 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.DefaultEndpoint - [channel=0xd0a49c33, /192.168.1.174:48628 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1] flushCommands() Flushing 0 commands
+15:47:06:8480 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.ConnectionWatchdog - [channel=0xd0a49c33, /192.168.1.174:48628 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, last known addr=redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544] channelActive()
+15:47:06:8490 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xd0a49c33, /192.168.1.174:48628 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] channelActive() done
+15:47:06:8490 [lettuce-nioEventLoop-4-1] DEBUG io.lettuce.core.AbstractRedisClient - Connecting to Redis at redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/<unresolved>:11544: Success
+15:47:06:8740 [http-nio-9090-exec-1] DEBUG io.lettuce.core.RedisChannelHandler - dispatching command AsyncCommand [type=GET, output=ValueOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:47:06:8790 [http-nio-9090-exec-1] DEBUG i.l.core.protocol.DefaultEndpoint - [channel=0xd0a49c33, /192.168.1.174:48628 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1] write() writeAndFlush command AsyncCommand [type=GET, output=ValueOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:47:06:8810 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xd0a49c33, /192.168.1.174:48628 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] write(ctx, AsyncCommand [type=GET, output=ValueOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+15:47:06:8840 [http-nio-9090-exec-1] DEBUG i.l.core.protocol.DefaultEndpoint - [channel=0xd0a49c33, /192.168.1.174:48628 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1] write() done
+15:47:06:8840 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandEncoder - [channel=0xd0a49c33, /192.168.1.174:48628 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544] writing command AsyncCommand [type=GET, output=ValueOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:47:06:9100 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xd0a49c33, /192.168.1.174:48628 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Received: 3 bytes, 1 commands in the stack
+15:47:06:9100 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xd0a49c33, /192.168.1.174:48628 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Stack contains: 1 commands
+15:47:06:9110 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.RedisStateMachine - Decode done, empty stack: true
+15:47:06:9110 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xd0a49c33, /192.168.1.174:48628 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Completing command AsyncCommand [type=GET, output=ValueOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:47:09:4020 [http-nio-9090-exec-1] DEBUG i.m.c.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework
+15:47:13:6780 [http-nio-9090-exec-1] ERROR i.dhirajrajput.service.RedisService - Exception When set in Redis 
+java.lang.ClassCastException: class in.dhirajrajput.response_request.WeatherResponse cannot be cast to class java.lang.String (in.dhirajrajput.response_request.WeatherResponse is in unnamed module of loader 'app'; java.lang.String is in module java.base of loader 'bootstrap')
+	at org.springframework.data.redis.serializer.StringRedisSerializer.serialize(StringRedisSerializer.java:36)
+	at org.springframework.data.redis.core.AbstractOperations.rawValue(AbstractOperations.java:128)
+	at org.springframework.data.redis.core.DefaultValueOperations.set(DefaultValueOperations.java:251)
+	at in.dhirajrajput.service.RedisService.set(RedisService.java:30)
+	at in.dhirajrajput.service.WeatherService.getWeatherResponse(WeatherService.java:36)
+	at in.dhirajrajput.controller.UserController.getWeatherData(UserController.java:56)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:925)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:181)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+15:49:43:2060 [main] INFO  in.dhirajrajput.JournalApplication - Starting JournalApplication using Java 17.0.12 with PID 205818 (/home/el0369/Videos/SpringBoot/journalApp/target/classes started by el0369 in /home/el0369/Videos/SpringBoot/journalApp)
+15:49:43:2130 [main] INFO  in.dhirajrajput.JournalApplication - No active profile set, falling back to 1 default profile: "default"
+15:49:45:0480 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+15:49:45:0530 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+15:49:45:3940 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 329 ms. Found 2 MongoDB repository interfaces.
+15:49:45:4510 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+15:49:45:4550 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+15:49:45:5030 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface in.dhirajrajput.repository.JournalEntryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+15:49:45:5050 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface in.dhirajrajput.repository.UserRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+15:49:45:5060 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+15:49:46:7620 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+15:49:46:7900 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+15:49:46:7980 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:49:46:7990 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+15:49:46:9770 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:49:46:9790 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3609 ms
+15:49:49:6730 [main] DEBUG i.n.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework
+15:49:49:6820 [main] DEBUG i.l.c.r.AddressResolverGroupProvider - Starting without optional netty's non-blocking DNS resolver library
+15:49:49:6880 [main] DEBUG i.l.c.r.DefaultClientResources - -Dio.netty.eventLoopThreads: 8
+15:49:49:7040 [main] DEBUG i.l.c.r.DefaultEventLoopGroupProvider - Creating executor io.netty.util.concurrent.DefaultEventExecutorGroup
+15:49:49:7410 [main] DEBUG i.n.u.concurrent.GlobalEventExecutor - -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+15:49:49:7640 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+15:49:49:7650 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+15:49:49:7800 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+15:49:49:7810 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+15:49:49:7850 [main] DEBUG i.n.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@2499b971
+15:49:49:8280 [main] DEBUG i.n.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+15:49:49:8290 [main] DEBUG i.n.util.internal.PlatformDependent0 - Java version: 17
+15:49:49:8330 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+15:49:49:8350 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+15:49:49:8370 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.storeFence: available
+15:49:49:8400 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+15:49:49:8430 [main] DEBUG i.n.util.internal.PlatformDependent0 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
+15:49:49:8470 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+15:49:49:8540 [main] DEBUG i.n.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @163cc7b8
+15:49:49:8590 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, {int,long}): unavailable
+15:49:49:8590 [main] DEBUG i.n.util.internal.PlatformDependent - sun.misc.Unsafe: available
+15:49:49:8600 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+15:49:49:8600 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+15:49:49:8630 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+15:49:49:8640 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+15:49:49:8670 [main] DEBUG io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+15:49:49:8680 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+15:49:49:8950 [main] DEBUG i.n.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+15:49:49:9260 [main] DEBUG reactor.util.Loggers - Using Slf4j logging framework
+15:49:49:9370 [main] DEBUG i.l.c.event.jfr.EventRecorderHolder - Starting with JFR support
+15:49:49:9740 [main] DEBUG i.l.c.r.DefaultClientResources - LatencyUtils/HdrUtils are not available, metrics are disabled
+15:49:50:7450 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.HealthCheckController:
+	{GET [/public/health-check]}: healthCheck()
+	{POST [/public/create]}: createUser(UserDto)
+15:49:50:7620 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.JournalEntryController:
+	{POST [/journal/create]}: createEntry(JournalEntryDto)
+	{GET [/journal/list]}: getAllEntryOfUser()
+	{GET [/journal/byId/{id}]}: getEntityById(ObjectId)
+	{DELETE [/journal/byId/{id}]}: deleteEntityById(ObjectId)
+	{PUT [/journal/byId/{id}]}: updateJournalEtity(ObjectId,JournalEntryDto)
+15:49:50:7690 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.UserController:
+	{DELETE [/user/byId/{id}]}: deleteEntityById(ObjectId)
+	{PUT [/user/update]}: updateJournalEtity(UserDto)
+	{GET [/user/byId/{id}]}: getUserById(ObjectId)
+	{GET [/user/fetch-weather]}: getWeatherData()
+15:49:50:7880 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+15:49:50:8400 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+15:49:51:0740 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+15:49:51:2140 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1fa18f87, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d9bd1d6, org.springframework.security.web.context.SecurityContextHolderFilter@42238078, org.springframework.security.web.header.HeaderWriterFilter@2c5708e7, org.springframework.web.filter.CorsFilter@18ac4af6, org.springframework.security.web.authentication.logout.LogoutFilter@32513dea, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1592e540, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@49fe0bcd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3516b881, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@117fb9ba, org.springframework.security.web.access.ExceptionTranslationFilter@2374452a, org.springframework.security.web.access.intercept.AuthorizationFilter@93f15f6]
+15:49:51:8140 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+15:49:51:8490 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path ''
+15:49:51:8880 [main] INFO  in.dhirajrajput.JournalApplication - Started JournalApplication in 9.52 seconds (process running for 11.058)
+15:49:59:4640 [http-nio-9090-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:49:59:4650 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:49:59:4680 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+15:50:01:0830 [http-nio-9090-exec-2] DEBUG io.lettuce.core.RedisClient - Trying to get a Redis connection for: redis://default:********************************@redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com:11544
+15:50:01:3270 [http-nio-9090-exec-2] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 16
+15:50:01:3280 [http-nio-9090-exec-2] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 16
+15:50:01:3280 [http-nio-9090-exec-2] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+15:50:01:3280 [http-nio-9090-exec-2] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 9
+15:50:01:3280 [http-nio-9090-exec-2] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 4194304
+15:50:01:3280 [http-nio-9090-exec-2] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+15:50:01:3280 [http-nio-9090-exec-2] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+15:50:01:3280 [http-nio-9090-exec-2] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+15:50:01:3280 [http-nio-9090-exec-2] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+15:50:01:3280 [http-nio-9090-exec-2] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+15:50:01:3290 [http-nio-9090-exec-2] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: false
+15:50:01:3290 [http-nio-9090-exec-2] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+15:50:01:3440 [http-nio-9090-exec-2] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled
+15:50:01:3440 [http-nio-9090-exec-2] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
+15:50:01:3450 [http-nio-9090-exec-2] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+15:50:01:3520 [http-nio-9090-exec-2] DEBUG i.l.core.resource.KqueueProvider - Starting without optional kqueue library
+15:50:01:3560 [http-nio-9090-exec-2] DEBUG i.l.core.resource.IOUringProvider - Starting without optional io_uring library
+15:50:01:3590 [http-nio-9090-exec-2] DEBUG i.l.core.resource.EpollProvider - Starting without optional epoll library
+15:50:01:3700 [http-nio-9090-exec-2] DEBUG i.l.c.r.DefaultEventLoopGroupProvider - Allocating executor io.netty.channel.nio.NioEventLoopGroup
+15:50:01:3710 [http-nio-9090-exec-2] DEBUG i.l.c.r.DefaultEventLoopGroupProvider - Creating executor io.netty.channel.nio.NioEventLoopGroup
+15:50:01:3730 [http-nio-9090-exec-2] DEBUG i.n.c.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 16
+15:50:01:3810 [http-nio-9090-exec-2] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
+15:50:01:3820 [http-nio-9090-exec-2] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+15:50:01:3890 [http-nio-9090-exec-2] DEBUG i.l.c.r.DefaultEventLoopGroupProvider - Adding reference to io.netty.channel.nio.NioEventLoopGroup@27dc0644, existing ref count 0
+15:50:01:5360 [http-nio-9090-exec-2] DEBUG io.lettuce.core.RedisClient - Resolved SocketAddress redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/<unresolved>:11544 using redis://default:********************************@redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com:11544
+15:50:01:5370 [http-nio-9090-exec-2] DEBUG io.lettuce.core.AbstractRedisClient - Connecting to Redis at redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/<unresolved>:11544
+15:50:01:5440 [http-nio-9090-exec-2] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.processId: 205818 (auto-detected)
+15:50:01:5480 [http-nio-9090-exec-2] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv4Stack: false
+15:50:01:5490 [http-nio-9090-exec-2] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv6Addresses: false
+15:50:01:5520 [http-nio-9090-exec-2] DEBUG i.netty.util.NetUtilInitializations - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+15:50:01:5540 [http-nio-9090-exec-2] DEBUG io.netty.util.NetUtil - /proc/sys/net/core/somaxconn: 4096
+15:50:01:5560 [http-nio-9090-exec-2] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.machineId: 00:e0:4c:ff:fe:68:00:8d (auto-detected)
+15:50:01:5990 [http-nio-9090-exec-2] DEBUG i.n.b.ChannelInitializerExtensions - -Dio.netty.bootstrap.extensions: null
+15:50:02:7170 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xcb6710a1, [id: 0x5f92ec0f] (inactive), epid=0x1, chid=0x1] channelRegistered()
+15:50:02:7220 [lettuce-nioEventLoop-4-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096
+15:50:02:7220 [lettuce-nioEventLoop-4-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8
+15:50:02:7230 [lettuce-nioEventLoop-4-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.chunkSize: 32
+15:50:02:7230 [lettuce-nioEventLoop-4-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.blocking: false
+15:50:02:7230 [lettuce-nioEventLoop-4-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.batchFastThreadLocalOnly: true
+15:50:02:7350 [lettuce-nioEventLoop-4-1] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkAccessible: true
+15:50:02:7350 [lettuce-nioEventLoop-4-1] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkBounds: true
+15:50:02:7350 [lettuce-nioEventLoop-4-1] DEBUG i.n.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@1a21e11e
+15:50:02:7970 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] write(ctx, AsyncCommand [type=HELLO, output=GenericMapOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+15:50:02:8030 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandEncoder - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544] writing command AsyncCommand [type=HELLO, output=GenericMapOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:50:02:8340 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Received: 704 bytes, 1 commands in the stack
+15:50:02:8340 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Stack contains: 1 commands
+15:50:02:8490 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.RedisStateMachine - Decode done, empty stack: true
+15:50:02:8490 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Completing command AsyncCommand [type=HELLO, output=GenericMapOutput [output={server=redis, version=7.2.3, proto=3, id=7, mode=cluster, role=master, modules=name, ReJSON=ver, 20613=path, /enterprise-managed=args, name=searchlight, ver=20819, path=/enterprise-managed, args=FORK_GC_CLEAN_THRESHOLD, timeseries=ver, 11015=path, 100=MAXAGGREGATERESULTS, 10000=MT_MODE, MT_MODE_ONLY_ON_OPERATIONS=WORKER_THREADS}, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:50:02:8530 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] write(ctx, [AsyncCommand [type=CLIENT, output=StatusOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command], AsyncCommand [type=CLIENT, output=StatusOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]], promise)
+15:50:02:8550 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandEncoder - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544] writing command AsyncCommand [type=CLIENT, output=StatusOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:50:02:8560 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandEncoder - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544] writing command AsyncCommand [type=CLIENT, output=StatusOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:50:02:8820 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Received: 10 bytes, 2 commands in the stack
+15:50:02:8820 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Stack contains: 2 commands
+15:50:02:8830 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.RedisStateMachine - Decode done, empty stack: true
+15:50:02:8830 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Completing command AsyncCommand [type=CLIENT, output=StatusOutput [output=OK, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:50:02:8840 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Stack contains: 1 commands
+15:50:02:8840 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.RedisStateMachine - Decode done, empty stack: true
+15:50:02:8840 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Completing command AsyncCommand [type=CLIENT, output=StatusOutput [output=OK, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:50:02:8850 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] channelActive()
+15:50:02:8870 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.DefaultEndpoint - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1] activateEndpointAndExecuteBufferedCommands 0 command(s) buffered
+15:50:02:8870 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.DefaultEndpoint - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1] activating endpoint
+15:50:02:8880 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.DefaultEndpoint - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1] flushCommands()
+15:50:02:8890 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.DefaultEndpoint - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1] flushCommands() Flushing 0 commands
+15:50:02:8940 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.ConnectionWatchdog - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, last known addr=redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544] channelActive()
+15:50:02:8940 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] channelActive() done
+15:50:02:8950 [lettuce-nioEventLoop-4-1] DEBUG io.lettuce.core.AbstractRedisClient - Connecting to Redis at redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/<unresolved>:11544: Success
+15:50:02:9210 [http-nio-9090-exec-2] DEBUG io.lettuce.core.RedisChannelHandler - dispatching command AsyncCommand [type=GET, output=ValueOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:50:02:9250 [http-nio-9090-exec-2] DEBUG i.l.core.protocol.DefaultEndpoint - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1] write() writeAndFlush command AsyncCommand [type=GET, output=ValueOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:50:02:9270 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] write(ctx, AsyncCommand [type=GET, output=ValueOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+15:50:02:9300 [http-nio-9090-exec-2] DEBUG i.l.core.protocol.DefaultEndpoint - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1] write() done
+15:50:02:9320 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandEncoder - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544] writing command AsyncCommand [type=GET, output=ValueOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:50:02:9570 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Received: 3 bytes, 1 commands in the stack
+15:50:02:9580 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Stack contains: 1 commands
+15:50:02:9580 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.RedisStateMachine - Decode done, empty stack: true
+15:50:02:9580 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Completing command AsyncCommand [type=GET, output=ValueOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:50:05:6340 [http-nio-9090-exec-2] DEBUG i.m.c.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework
+15:50:09:2150 [http-nio-9090-exec-2] DEBUG io.lettuce.core.RedisChannelHandler - dispatching command AsyncCommand [type=SETEX, output=StatusOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:50:09:2150 [http-nio-9090-exec-2] DEBUG i.l.core.protocol.DefaultEndpoint - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1] write() writeAndFlush command AsyncCommand [type=SETEX, output=StatusOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:50:09:2160 [http-nio-9090-exec-2] DEBUG i.l.core.protocol.DefaultEndpoint - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1] write() done
+15:50:09:2160 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] write(ctx, AsyncCommand [type=SETEX, output=StatusOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+15:50:09:2180 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandEncoder - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544] writing command AsyncCommand [type=SETEX, output=StatusOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:50:09:2440 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Received: 5 bytes, 1 commands in the stack
+15:50:09:2440 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Stack contains: 1 commands
+15:50:09:2450 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.RedisStateMachine - Decode done, empty stack: true
+15:50:09:2450 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Completing command AsyncCommand [type=SETEX, output=StatusOutput [output=OK, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:50:20:1880 [http-nio-9090-exec-3] DEBUG io.lettuce.core.RedisChannelHandler - dispatching command AsyncCommand [type=GET, output=ValueOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:50:20:1880 [http-nio-9090-exec-3] DEBUG i.l.core.protocol.DefaultEndpoint - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1] write() writeAndFlush command AsyncCommand [type=GET, output=ValueOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:50:20:1890 [http-nio-9090-exec-3] DEBUG i.l.core.protocol.DefaultEndpoint - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1] write() done
+15:50:20:1890 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] write(ctx, AsyncCommand [type=GET, output=ValueOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+15:50:20:1900 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandEncoder - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544] writing command AsyncCommand [type=GET, output=ValueOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:50:20:2160 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Received: 512 bytes, 1 commands in the stack
+15:50:20:2160 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Stack contains: 1 commands
+15:50:20:2170 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.RedisStateMachine - Decode done, empty stack: false
+15:50:20:2180 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Received: 165 bytes, 1 commands in the stack
+15:50:20:2180 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Stack contains: 1 commands
+15:50:20:2190 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.RedisStateMachine - Decode done, empty stack: true
+15:50:20:2190 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0xcb6710a1, /192.168.1.174:42120 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Completing command AsyncCommand [type=GET, output=ValueOutput [output=[B@3f6360c3, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:50:20:2240 [http-nio-9090-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.ClassCastException: class java.lang.String cannot be cast to class in.dhirajrajput.response_request.WeatherResponse (java.lang.String is in module java.base of loader 'bootstrap'; in.dhirajrajput.response_request.WeatherResponse is in unnamed module of loader 'app')] with root cause
+java.lang.ClassCastException: class java.lang.String cannot be cast to class in.dhirajrajput.response_request.WeatherResponse (java.lang.String is in module java.base of loader 'bootstrap'; in.dhirajrajput.response_request.WeatherResponse is in unnamed module of loader 'app')
+	at in.dhirajrajput.service.WeatherService.getWeatherResponse(WeatherService.java:28)
+	at in.dhirajrajput.controller.UserController.getWeatherData(UserController.java:56)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:925)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:181)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+15:52:24:6820 [main] INFO  in.dhirajrajput.JournalApplication - Starting JournalApplication using Java 17.0.12 with PID 207096 (/home/el0369/Videos/SpringBoot/journalApp/target/classes started by el0369 in /home/el0369/Videos/SpringBoot/journalApp)
+15:52:24:6870 [main] INFO  in.dhirajrajput.JournalApplication - No active profile set, falling back to 1 default profile: "default"
+15:52:26:0250 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+15:52:26:0270 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+15:52:26:2710 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 236 ms. Found 2 MongoDB repository interfaces.
+15:52:26:3050 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+15:52:26:3080 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+15:52:26:3480 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface in.dhirajrajput.repository.JournalEntryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+15:52:26:3500 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface in.dhirajrajput.repository.UserRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+15:52:26:3510 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+15:52:27:1570 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+15:52:27:1890 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+15:52:27:1930 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:52:27:1930 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+15:52:27:2880 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:52:27:2910 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2495 ms
+15:52:29:0060 [main] DEBUG i.n.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework
+15:52:29:0130 [main] DEBUG i.l.c.r.AddressResolverGroupProvider - Starting without optional netty's non-blocking DNS resolver library
+15:52:29:0160 [main] DEBUG i.l.c.r.DefaultClientResources - -Dio.netty.eventLoopThreads: 8
+15:52:29:0270 [main] DEBUG i.l.c.r.DefaultEventLoopGroupProvider - Creating executor io.netty.util.concurrent.DefaultEventExecutorGroup
+15:52:29:0460 [main] DEBUG i.n.u.concurrent.GlobalEventExecutor - -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+15:52:29:0540 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+15:52:29:0550 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+15:52:29:0650 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+15:52:29:0660 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+15:52:29:0700 [main] DEBUG i.n.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@12e007be
+15:52:29:1030 [main] DEBUG i.n.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+15:52:29:1040 [main] DEBUG i.n.util.internal.PlatformDependent0 - Java version: 17
+15:52:29:1050 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+15:52:29:1070 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+15:52:29:1070 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.storeFence: available
+15:52:29:1080 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+15:52:29:1080 [main] DEBUG i.n.util.internal.PlatformDependent0 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
+15:52:29:1090 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+15:52:29:1110 [main] DEBUG i.n.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @163cc7b8
+15:52:29:1130 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, {int,long}): unavailable
+15:52:29:1140 [main] DEBUG i.n.util.internal.PlatformDependent - sun.misc.Unsafe: available
+15:52:29:1140 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+15:52:29:1140 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+15:52:29:1160 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+15:52:29:1160 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+15:52:29:1180 [main] DEBUG io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+15:52:29:1190 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+15:52:29:1310 [main] DEBUG i.n.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+15:52:29:1440 [main] DEBUG reactor.util.Loggers - Using Slf4j logging framework
+15:52:29:1510 [main] DEBUG i.l.c.event.jfr.EventRecorderHolder - Starting with JFR support
+15:52:29:1650 [main] DEBUG i.l.c.r.DefaultClientResources - LatencyUtils/HdrUtils are not available, metrics are disabled
+15:52:29:5500 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.HealthCheckController:
+	{GET [/public/health-check]}: healthCheck()
+	{POST [/public/create]}: createUser(UserDto)
+15:52:29:5570 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.JournalEntryController:
+	{POST [/journal/create]}: createEntry(JournalEntryDto)
+	{DELETE [/journal/byId/{id}]}: deleteEntityById(ObjectId)
+	{PUT [/journal/byId/{id}]}: updateJournalEtity(ObjectId,JournalEntryDto)
+	{GET [/journal/list]}: getAllEntryOfUser()
+	{GET [/journal/byId/{id}]}: getEntityById(ObjectId)
+15:52:29:5610 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.UserController:
+	{DELETE [/user/byId/{id}]}: deleteEntityById(ObjectId)
+	{PUT [/user/update]}: updateJournalEtity(UserDto)
+	{GET [/user/byId/{id}]}: getUserById(ObjectId)
+	{GET [/user/fetch-weather]}: getWeatherData()
+15:52:29:5720 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+15:52:29:5940 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+15:52:29:7160 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+15:52:29:7880 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1592e540, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e2772a9, org.springframework.security.web.context.SecurityContextHolderFilter@2c5708e7, org.springframework.security.web.header.HeaderWriterFilter@186f7434, org.springframework.web.filter.CorsFilter@4449b273, org.springframework.security.web.authentication.logout.LogoutFilter@14af73e1, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2b400bd0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4e26564d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42238078, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1fa18f87, org.springframework.security.web.access.ExceptionTranslationFilter@299cab08, org.springframework.security.web.access.intercept.AuthorizationFilter@74a5bef0]
+15:52:30:1000 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+15:52:30:1220 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path ''
+15:52:30:1410 [main] INFO  in.dhirajrajput.JournalApplication - Started JournalApplication in 6.148 seconds (process running for 7.371)
+15:52:50:2780 [http-nio-9090-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:52:50:2790 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:52:50:2820 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+15:52:50:3600 [http-nio-9090-exec-2] DEBUG io.lettuce.core.RedisClient - Trying to get a Redis connection for: redis://default:********************************@redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com:11544
+15:52:50:5950 [http-nio-9090-exec-2] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 16
+15:52:50:5950 [http-nio-9090-exec-2] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 16
+15:52:50:5960 [http-nio-9090-exec-2] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+15:52:50:5960 [http-nio-9090-exec-2] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 9
+15:52:50:5960 [http-nio-9090-exec-2] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 4194304
+15:52:50:5960 [http-nio-9090-exec-2] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+15:52:50:5970 [http-nio-9090-exec-2] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+15:52:50:5970 [http-nio-9090-exec-2] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+15:52:50:5970 [http-nio-9090-exec-2] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+15:52:50:5970 [http-nio-9090-exec-2] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+15:52:50:5970 [http-nio-9090-exec-2] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: false
+15:52:50:5970 [http-nio-9090-exec-2] DEBUG i.n.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+15:52:50:6140 [http-nio-9090-exec-2] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled
+15:52:50:6140 [http-nio-9090-exec-2] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
+15:52:50:6150 [http-nio-9090-exec-2] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+15:52:50:6210 [http-nio-9090-exec-2] DEBUG i.l.core.resource.KqueueProvider - Starting without optional kqueue library
+15:52:50:6240 [http-nio-9090-exec-2] DEBUG i.l.core.resource.IOUringProvider - Starting without optional io_uring library
+15:52:50:6260 [http-nio-9090-exec-2] DEBUG i.l.core.resource.EpollProvider - Starting without optional epoll library
+15:52:50:6360 [http-nio-9090-exec-2] DEBUG i.l.c.r.DefaultEventLoopGroupProvider - Allocating executor io.netty.channel.nio.NioEventLoopGroup
+15:52:50:6360 [http-nio-9090-exec-2] DEBUG i.l.c.r.DefaultEventLoopGroupProvider - Creating executor io.netty.channel.nio.NioEventLoopGroup
+15:52:50:6380 [http-nio-9090-exec-2] DEBUG i.n.c.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 16
+15:52:50:6450 [http-nio-9090-exec-2] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
+15:52:50:6450 [http-nio-9090-exec-2] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+15:52:50:6510 [http-nio-9090-exec-2] DEBUG i.l.c.r.DefaultEventLoopGroupProvider - Adding reference to io.netty.channel.nio.NioEventLoopGroup@7950cf4e, existing ref count 0
+15:52:50:7870 [http-nio-9090-exec-2] DEBUG io.lettuce.core.RedisClient - Resolved SocketAddress redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/<unresolved>:11544 using redis://default:********************************@redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com:11544
+15:52:50:7870 [http-nio-9090-exec-2] DEBUG io.lettuce.core.AbstractRedisClient - Connecting to Redis at redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/<unresolved>:11544
+15:52:50:7930 [http-nio-9090-exec-2] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.processId: 207096 (auto-detected)
+15:52:50:7970 [http-nio-9090-exec-2] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv4Stack: false
+15:52:50:7980 [http-nio-9090-exec-2] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv6Addresses: false
+15:52:50:8010 [http-nio-9090-exec-2] DEBUG i.netty.util.NetUtilInitializations - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+15:52:50:8020 [http-nio-9090-exec-2] DEBUG io.netty.util.NetUtil - /proc/sys/net/core/somaxconn: 4096
+15:52:50:8030 [http-nio-9090-exec-2] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.machineId: 00:e0:4c:ff:fe:68:00:8d (auto-detected)
+15:52:50:8430 [http-nio-9090-exec-2] DEBUG i.n.b.ChannelInitializerExtensions - -Dio.netty.bootstrap.extensions: null
+15:52:50:9770 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0x9cb25d39, [id: 0x4549d735] (inactive), epid=0x1, chid=0x1] channelRegistered()
+15:52:50:9850 [lettuce-nioEventLoop-4-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096
+15:52:50:9850 [lettuce-nioEventLoop-4-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8
+15:52:50:9850 [lettuce-nioEventLoop-4-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.chunkSize: 32
+15:52:50:9850 [lettuce-nioEventLoop-4-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.blocking: false
+15:52:50:9860 [lettuce-nioEventLoop-4-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.batchFastThreadLocalOnly: true
+15:52:50:9970 [lettuce-nioEventLoop-4-1] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkAccessible: true
+15:52:50:9980 [lettuce-nioEventLoop-4-1] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkBounds: true
+15:52:50:9980 [lettuce-nioEventLoop-4-1] DEBUG i.n.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@5ba0b47f
+15:52:51:0620 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] write(ctx, AsyncCommand [type=HELLO, output=GenericMapOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+15:52:51:0680 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandEncoder - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544] writing command AsyncCommand [type=HELLO, output=GenericMapOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:52:51:1000 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Received: 704 bytes, 1 commands in the stack
+15:52:51:1000 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Stack contains: 1 commands
+15:52:51:1170 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.RedisStateMachine - Decode done, empty stack: true
+15:52:51:1180 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Completing command AsyncCommand [type=HELLO, output=GenericMapOutput [output={server=redis, version=7.2.3, proto=3, id=7, mode=cluster, role=master, modules=name, ReJSON=ver, 20613=path, /enterprise-managed=args, name=searchlight, ver=20819, path=/enterprise-managed, args=FORK_GC_CLEAN_THRESHOLD, timeseries=ver, 11015=path, 100=MAXAGGREGATERESULTS, 10000=MT_MODE, MT_MODE_ONLY_ON_OPERATIONS=WORKER_THREADS}, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:52:51:1230 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] write(ctx, [AsyncCommand [type=CLIENT, output=StatusOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command], AsyncCommand [type=CLIENT, output=StatusOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]], promise)
+15:52:51:1240 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandEncoder - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544] writing command AsyncCommand [type=CLIENT, output=StatusOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:52:51:1250 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandEncoder - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544] writing command AsyncCommand [type=CLIENT, output=StatusOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:52:51:1540 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Received: 10 bytes, 2 commands in the stack
+15:52:51:1550 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Stack contains: 2 commands
+15:52:51:1560 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.RedisStateMachine - Decode done, empty stack: true
+15:52:51:1560 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Completing command AsyncCommand [type=CLIENT, output=StatusOutput [output=OK, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:52:51:1570 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Stack contains: 1 commands
+15:52:51:1570 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.RedisStateMachine - Decode done, empty stack: true
+15:52:51:1570 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Completing command AsyncCommand [type=CLIENT, output=StatusOutput [output=OK, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:52:51:1580 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] channelActive()
+15:52:51:1590 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.DefaultEndpoint - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1] activateEndpointAndExecuteBufferedCommands 0 command(s) buffered
+15:52:51:1600 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.DefaultEndpoint - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1] activating endpoint
+15:52:51:1600 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.DefaultEndpoint - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1] flushCommands()
+15:52:51:1610 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.DefaultEndpoint - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1] flushCommands() Flushing 0 commands
+15:52:51:1660 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.ConnectionWatchdog - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, last known addr=redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544] channelActive()
+15:52:51:1670 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] channelActive() done
+15:52:51:1670 [lettuce-nioEventLoop-4-1] DEBUG io.lettuce.core.AbstractRedisClient - Connecting to Redis at redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/<unresolved>:11544: Success
+15:52:51:1910 [http-nio-9090-exec-2] DEBUG io.lettuce.core.RedisChannelHandler - dispatching command AsyncCommand [type=GET, output=ValueOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:52:51:1950 [http-nio-9090-exec-2] DEBUG i.l.core.protocol.DefaultEndpoint - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1] write() writeAndFlush command AsyncCommand [type=GET, output=ValueOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:52:51:1980 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] write(ctx, AsyncCommand [type=GET, output=ValueOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+15:52:51:2000 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandEncoder - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544] writing command AsyncCommand [type=GET, output=ValueOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:52:51:2000 [http-nio-9090-exec-2] DEBUG i.l.core.protocol.DefaultEndpoint - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1] write() done
+15:52:51:2270 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Received: 677 bytes, 1 commands in the stack
+15:52:51:2270 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Stack contains: 1 commands
+15:52:51:2280 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.RedisStateMachine - Decode done, empty stack: true
+15:52:51:2280 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Completing command AsyncCommand [type=GET, output=ValueOutput [output=[B@18d8a695, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:53:03:6740 [http-nio-9090-exec-3] DEBUG io.lettuce.core.RedisChannelHandler - dispatching command AsyncCommand [type=GET, output=ValueOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:53:03:6750 [http-nio-9090-exec-3] DEBUG i.l.core.protocol.DefaultEndpoint - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1] write() writeAndFlush command AsyncCommand [type=GET, output=ValueOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:53:03:6750 [http-nio-9090-exec-3] DEBUG i.l.core.protocol.DefaultEndpoint - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1] write() done
+15:53:03:6750 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] write(ctx, AsyncCommand [type=GET, output=ValueOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command], promise)
+15:53:03:6760 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandEncoder - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544] writing command AsyncCommand [type=GET, output=ValueOutput [output=null, error='null'], commandType=io.lettuce.core.protocol.Command]
+15:53:03:7040 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Received: 677 bytes, 1 commands in the stack
+15:53:03:7040 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Stack contains: 1 commands
+15:53:03:7040 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.RedisStateMachine - Decode done, empty stack: true
+15:53:03:7040 [lettuce-nioEventLoop-4-1] DEBUG i.l.core.protocol.CommandHandler - [channel=0x9cb25d39, /192.168.1.174:53054 -> redis-11544.c305.ap-south-1-1.ec2.redns.redis-cloud.com/3.110.87.88:11544, epid=0x1, chid=0x1] Completing command AsyncCommand [type=GET, output=ValueOutput [output=[B@3cc69a9f, error='null'], commandType=io.lettuce.core.protocol.Command]
