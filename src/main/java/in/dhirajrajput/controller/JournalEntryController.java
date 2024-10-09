@@ -5,7 +5,7 @@ import in.dhirajrajput.entity.User;
 import in.dhirajrajput.response_request.JournalEntryDto;
 import in.dhirajrajput.service.JournalEntryService;
 import in.dhirajrajput.service.UserService;
-
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +19,7 @@ import java.util.*;
 @RestController
 @RequestMapping("/journal")
 @Slf4j
+@Tag(name = "JournalEntry APIs")
 public class JournalEntryController {
 
     @Autowired

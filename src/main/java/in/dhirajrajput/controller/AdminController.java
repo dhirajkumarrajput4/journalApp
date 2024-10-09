@@ -19,8 +19,10 @@ import in.dhirajrajput.entity.User;
 import java.util.*;
 
 import in.dhirajrajput.service.UserService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RequestMapping("/admin")
+@Tag(name = "Admin APIs")
 public class AdminController {
 
     @Autowired

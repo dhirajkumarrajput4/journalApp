@@ -5,6 +5,8 @@ import in.dhirajrajput.response_request.UserDto;
 import in.dhirajrajput.response_request.WeatherResponse;
 import in.dhirajrajput.service.UserService;
 import in.dhirajrajput.service.WeatherService;
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,6 +19,7 @@ import java.util.Optional;
 
 @Controller
 @RequestMapping("/user")
+@Tag(name = "User APIs")
 public class UserController {
 
     @Autowired

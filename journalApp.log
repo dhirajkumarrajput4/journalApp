@@ -12580,3 +12580,373 @@ Consider defining a bean of type 'org.springframework.security.authentication.Au
 17:29:12:2940 [http-nio-9090-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 17:29:12:2950 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 17:29:12:2980 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+18:32:36:7520 [SpringApplicationShutdownHook] DEBUG io.lettuce.core.AbstractRedisClient - Initiate shutdown (100, 100, MILLISECONDS)
+18:32:36:7600 [SpringApplicationShutdownHook] DEBUG i.l.c.r.DefaultClientResources - Initiate shutdown (0, 2, SECONDS)
+18:32:36:7630 [SpringApplicationShutdownHook] DEBUG i.l.c.r.DefaultEventLoopGroupProvider - Initiate shutdown (0, 2, SECONDS)
+18:32:47:7010 [main] INFO  in.dhirajrajput.JournalApplication - Starting JournalApplication using Java 17.0.12 with PID 259861 (/home/el0369/Videos/SpringBoot/journalApp/target/classes started by el0369 in /home/el0369/Videos/SpringBoot/journalApp)
+18:32:47:7060 [main] INFO  in.dhirajrajput.JournalApplication - No active profile set, falling back to 1 default profile: "default"
+18:32:48:4000 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration.propertySourcesPlaceholderConfigurer
+18:32:48:4100 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+18:32:48:4340 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration.propertySourcesPlaceholderConfigurer
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:183)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:144)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:428)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at in.dhirajrajput.JournalApplication.main(JournalApplication.java:22)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [in.dhirajrajput.config.SwaggerConfig] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@2cdf8d8a]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:360)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$1(AbstractAutowireCapableBeanFactory.java:750)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1740)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:749)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:682)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:653)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1645)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:534)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:247)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:240)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:230)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:183)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:158)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: io/swagger/v3/oas/models/OpenAPI
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402)
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465)
+	... 33 common frames omitted
+Caused by: java.lang.ClassNotFoundException: io.swagger.v3.oas.models.OpenAPI
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 37 common frames omitted
+18:33:13:6460 [main] INFO  in.dhirajrajput.JournalApplication - Starting JournalApplication using Java 17.0.12 with PID 260290 (/home/el0369/Videos/SpringBoot/journalApp/target/classes started by el0369 in /home/el0369/Videos/SpringBoot/journalApp)
+18:33:13:6500 [main] INFO  in.dhirajrajput.JournalApplication - No active profile set, falling back to 1 default profile: "default"
+18:33:14:6410 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+18:33:14:6420 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+18:33:14:8130 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 166 ms. Found 2 MongoDB repository interfaces.
+18:33:14:8360 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+18:33:14:8380 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+18:33:14:8590 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface in.dhirajrajput.repository.JournalEntryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+18:33:14:8600 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface in.dhirajrajput.repository.UserRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+18:33:14:8610 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+18:33:15:4170 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+18:33:15:4260 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+18:33:15:4300 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+18:33:15:4300 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+18:33:15:5060 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+18:33:15:5100 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1779 ms
+18:33:17:0510 [main] DEBUG i.n.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework
+18:33:17:0550 [main] DEBUG i.l.c.r.AddressResolverGroupProvider - Starting without optional netty's non-blocking DNS resolver library
+18:33:17:0570 [main] DEBUG i.l.c.r.DefaultClientResources - -Dio.netty.eventLoopThreads: 8
+18:33:17:0660 [main] DEBUG i.l.c.r.DefaultEventLoopGroupProvider - Creating executor io.netty.util.concurrent.DefaultEventExecutorGroup
+18:33:17:0790 [main] DEBUG i.n.u.concurrent.GlobalEventExecutor - -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+18:33:17:0860 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+18:33:17:0870 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+18:33:17:0910 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+18:33:17:0910 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+18:33:17:0930 [main] DEBUG i.n.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@3fd5d679
+18:33:17:1110 [main] DEBUG i.n.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+18:33:17:1120 [main] DEBUG i.n.util.internal.PlatformDependent0 - Java version: 17
+18:33:17:1140 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+18:33:17:1160 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+18:33:17:1170 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.storeFence: available
+18:33:17:1180 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+18:33:17:1190 [main] DEBUG i.n.util.internal.PlatformDependent0 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
+18:33:17:1200 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+18:33:17:1220 [main] DEBUG i.n.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @163cc7b8
+18:33:17:1250 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, {int,long}): unavailable
+18:33:17:1260 [main] DEBUG i.n.util.internal.PlatformDependent - sun.misc.Unsafe: available
+18:33:17:1260 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+18:33:17:1270 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+18:33:17:1290 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+18:33:17:1300 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+18:33:17:1310 [main] DEBUG io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+18:33:17:1320 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+18:33:17:1510 [main] DEBUG i.n.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+18:33:17:1660 [main] DEBUG reactor.util.Loggers - Using Slf4j logging framework
+18:33:17:1710 [main] DEBUG i.l.c.event.jfr.EventRecorderHolder - Starting with JFR support
+18:33:17:1860 [main] DEBUG i.l.c.r.DefaultClientResources - LatencyUtils/HdrUtils are not available, metrics are disabled
+18:33:17:5100 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.HealthCheckController:
+	{POST [/public/login]}: login(UserDto)
+	{GET [/public/health-check]}: healthCheck()
+	{POST [/public/create]}: createUser(UserDto)
+18:33:17:5290 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.JournalEntryController:
+	{POST [/journal/create]}: createEntry(JournalEntryDto)
+	{GET [/journal/list]}: getAllEntryOfUser()
+	{GET [/journal/byId/{id}]}: getEntityById(ObjectId)
+	{DELETE [/journal/byId/{id}]}: deleteEntityById(ObjectId)
+	{PUT [/journal/byId/{id}]}: updateJournalEtity(ObjectId,JournalEntryDto)
+18:33:17:5390 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.UserController:
+	{DELETE [/user/byId/{id}]}: deleteEntityById(ObjectId)
+	{PUT [/user/update]}: updateJournalEtity(UserDto)
+	{GET [/user/byId/{id}]}: getUserById(ObjectId)
+	{GET [/user/fetch-weather]}: getWeatherData()
+18:33:17:5490 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+18:33:17:5710 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+18:33:17:5750 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+18:33:17:5790 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+18:33:17:6010 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+18:33:17:7090 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+18:33:17:7710 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@520ee6b3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15f11bfb, org.springframework.security.web.context.SecurityContextHolderFilter@6d6712b7, org.springframework.security.web.header.HeaderWriterFilter@740ad32e, org.springframework.web.filter.CorsFilter@16a499d1, org.springframework.security.web.authentication.logout.LogoutFilter@5ca86715, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@50c2ef56, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3eadad14, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4acc27fd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2bf4fa1, org.springframework.security.web.access.ExceptionTranslationFilter@24955144, org.springframework.security.web.access.intercept.AuthorizationFilter@35d0749]
+18:33:18:2260 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+18:33:18:2400 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path ''
+18:33:18:2580 [main] INFO  in.dhirajrajput.JournalApplication - Started JournalApplication in 4.965 seconds (process running for 5.429)
+18:34:27:0940 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18:34:27:0940 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+18:34:27:0960 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+18:35:40:8660 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve class org.bson.types.ObjectId
+18:35:40:8760 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class int]
+18:35:40:9130 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.util.Date]
+18:35:40:9470 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve class in.dhirajrajput.response_request.JournalEntryDto
+18:35:40:9500 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.lang.String]
+18:35:40:9630 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.time.LocalDateTime]
+18:35:40:9750 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve org.springframework.http.ResponseEntity<in.dhirajrajput.entity.JournalEntry>
+18:35:40:9750 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class in.dhirajrajput.entity.JournalEntry]
+18:35:40:9780 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class org.bson.types.ObjectId]
+18:35:40:9800 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class int]
+18:35:40:9830 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.util.Date]
+18:35:40:9920 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.lang.String]
+18:35:40:9960 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.time.LocalDateTime]
+18:35:40:9980 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class in.dhirajrajput.enums.Sentiment]
+18:35:41:0170 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve class in.dhirajrajput.response_request.UserDto
+18:35:41:0190 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class org.bson.types.ObjectId]
+18:35:41:0210 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class int]
+18:35:41:0240 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.util.Date]
+18:35:41:0270 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.lang.String]
+18:35:41:0450 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class boolean]
+18:35:41:0630 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve org.springframework.http.ResponseEntity<java.lang.String>
+18:35:41:0630 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.lang.String]
+18:35:41:0660 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve class in.dhirajrajput.response_request.UserDto
+18:35:41:0690 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class org.bson.types.ObjectId]
+18:35:41:0710 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class int]
+18:35:41:0730 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.util.Date]
+18:35:41:0760 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.lang.String]
+18:35:41:0800 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class boolean]
+18:35:41:0840 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve org.springframework.http.ResponseEntity<in.dhirajrajput.response_request.UserDto>
+18:35:41:0840 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class in.dhirajrajput.response_request.UserDto]
+18:35:41:0850 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class org.bson.types.ObjectId]
+18:35:41:0870 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class int]
+18:35:41:0900 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.util.Date]
+18:35:41:0930 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.lang.String]
+18:35:41:0990 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class boolean]
+18:35:41:1030 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve class in.dhirajrajput.response_request.JournalEntryDto
+18:35:41:1050 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.lang.String]
+18:35:41:1080 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.time.LocalDateTime]
+18:35:41:1130 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve org.springframework.http.ResponseEntity<in.dhirajrajput.response_request.JournalEntryDto>
+18:35:41:1140 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class in.dhirajrajput.response_request.JournalEntryDto]
+18:35:41:1150 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.lang.String]
+18:35:41:1180 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.time.LocalDateTime]
+18:35:41:1240 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve org.springframework.http.ResponseEntity<java.lang.Object>
+18:35:41:1250 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.lang.Object]
+18:35:41:1300 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve org.springframework.http.ResponseEntity<java.lang.Object>
+18:35:41:1310 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.lang.Object]
+18:35:41:1350 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve class org.bson.types.ObjectId
+18:35:41:1370 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class int]
+18:35:41:1390 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.util.Date]
+18:35:41:1430 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve org.springframework.http.ResponseEntity<in.dhirajrajput.entity.JournalEntry>
+18:35:41:1440 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class in.dhirajrajput.entity.JournalEntry]
+18:35:41:1460 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class org.bson.types.ObjectId]
+18:35:41:1490 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class int]
+18:35:41:1520 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.util.Date]
+18:35:41:1540 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.lang.String]
+18:35:41:1570 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.time.LocalDateTime]
+18:35:41:1600 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class in.dhirajrajput.enums.Sentiment]
+18:35:41:1670 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve class org.bson.types.ObjectId
+18:35:41:1690 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class int]
+18:35:41:1710 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.util.Date]
+18:35:41:1750 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve org.springframework.http.ResponseEntity<java.lang.Object>
+18:35:41:1760 [http-nio-9090-exec-5] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.lang.Object]
+18:35:41:1910 [http-nio-9090-exec-5] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 500 ms
+18:36:15:0170 [http-nio-9090-exec-4] DEBUG o.s.api.AbstractOpenApiResource - Fetching openApi document from cache
+18:37:02:7380 [http-nio-9090-exec-5] DEBUG o.s.api.AbstractOpenApiResource - Fetching openApi document from cache
+18:39:21:0260 [SpringApplicationShutdownHook] DEBUG io.lettuce.core.AbstractRedisClient - Initiate shutdown (100, 100, MILLISECONDS)
+18:39:21:0330 [SpringApplicationShutdownHook] DEBUG i.l.c.r.DefaultClientResources - Initiate shutdown (0, 2, SECONDS)
+18:39:21:0350 [SpringApplicationShutdownHook] DEBUG i.l.c.r.DefaultEventLoopGroupProvider - Initiate shutdown (0, 2, SECONDS)
+18:39:22:4090 [main] INFO  in.dhirajrajput.JournalApplication - Starting JournalApplication using Java 17.0.12 with PID 262904 (/home/el0369/Videos/SpringBoot/journalApp/target/classes started by el0369 in /home/el0369/Videos/SpringBoot/journalApp)
+18:39:22:4140 [main] INFO  in.dhirajrajput.JournalApplication - No active profile set, falling back to 1 default profile: "default"
+18:39:23:8000 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+18:39:23:8020 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+18:39:24:0640 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 249 ms. Found 2 MongoDB repository interfaces.
+18:39:24:1020 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+18:39:24:1030 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+18:39:24:1290 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface in.dhirajrajput.repository.JournalEntryRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+18:39:24:1300 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface in.dhirajrajput.repository.UserRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+18:39:24:1310 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+18:39:24:8720 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+18:39:24:8890 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+18:39:24:8980 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+18:39:24:8990 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+18:39:25:0360 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+18:39:25:0390 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2539 ms
+18:39:27:1470 [main] DEBUG i.n.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework
+18:39:27:1510 [main] DEBUG i.l.c.r.AddressResolverGroupProvider - Starting without optional netty's non-blocking DNS resolver library
+18:39:27:1530 [main] DEBUG i.l.c.r.DefaultClientResources - -Dio.netty.eventLoopThreads: 8
+18:39:27:1620 [main] DEBUG i.l.c.r.DefaultEventLoopGroupProvider - Creating executor io.netty.util.concurrent.DefaultEventExecutorGroup
+18:39:27:1780 [main] DEBUG i.n.u.concurrent.GlobalEventExecutor - -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+18:39:27:1850 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+18:39:27:1860 [main] DEBUG i.n.u.i.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+18:39:27:1920 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+18:39:27:1920 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+18:39:27:1940 [main] DEBUG i.n.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@7aa15a80
+18:39:27:2130 [main] DEBUG i.n.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+18:39:27:2140 [main] DEBUG i.n.util.internal.PlatformDependent0 - Java version: 17
+18:39:27:2160 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+18:39:27:2170 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+18:39:27:2170 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.storeFence: available
+18:39:27:2180 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+18:39:27:2190 [main] DEBUG i.n.util.internal.PlatformDependent0 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
+18:39:27:2210 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+18:39:27:2240 [main] DEBUG i.n.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @163cc7b8
+18:39:27:2260 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, {int,long}): unavailable
+18:39:27:2260 [main] DEBUG i.n.util.internal.PlatformDependent - sun.misc.Unsafe: available
+18:39:27:2260 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+18:39:27:2270 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+18:39:27:2280 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+18:39:27:2290 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+18:39:27:2300 [main] DEBUG io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+18:39:27:2300 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+18:39:27:2420 [main] DEBUG i.n.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+18:39:27:2540 [main] DEBUG reactor.util.Loggers - Using Slf4j logging framework
+18:39:27:2610 [main] DEBUG i.l.c.event.jfr.EventRecorderHolder - Starting with JFR support
+18:39:27:2800 [main] DEBUG i.l.c.r.DefaultClientResources - LatencyUtils/HdrUtils are not available, metrics are disabled
+18:39:27:6120 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.HealthCheckController:
+	{POST [/public/login]}: login(UserDto)
+	{GET [/public/health-check]}: healthCheck()
+	{POST [/public/create]}: createUser(UserDto)
+18:39:27:6270 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.JournalEntryController:
+	{POST [/journal/create]}: createEntry(JournalEntryDto)
+	{GET [/journal/list]}: getAllEntryOfUser()
+	{GET [/journal/byId/{id}]}: getEntityById(ObjectId)
+	{DELETE [/journal/byId/{id}]}: deleteEntityById(ObjectId)
+	{PUT [/journal/byId/{id}]}: updateJournalEtity(ObjectId,JournalEntryDto)
+18:39:27:6370 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	i.d.c.UserController:
+	{GET [/user/byId/{id}]}: getUserById(ObjectId)
+	{GET [/user/fetch-weather]}: getWeatherData()
+	{DELETE [/user/byId/{id}]}: deleteEntityById(ObjectId)
+	{PUT [/user/update]}: updateJournalEtity(UserDto)
+18:39:27:6510 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+18:39:27:6750 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+18:39:27:6790 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+18:39:27:6820 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+18:39:27:6980 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+18:39:27:8200 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]], /swagger-ui*/*swagger-initializer.js=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /swagger-ui*/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]}
+18:39:27:9190 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@15f11bfb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@16a499d1, org.springframework.security.web.context.SecurityContextHolderFilter@4f563f96, org.springframework.security.web.header.HeaderWriterFilter@7f41d979, org.springframework.web.filter.CorsFilter@2bf4fa1, org.springframework.security.web.authentication.logout.LogoutFilter@53d808ea, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@560d6d2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4acc27fd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1feb76b9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@27210a3b, org.springframework.security.web.access.ExceptionTranslationFilter@9d2af36, org.springframework.security.web.access.intercept.AuthorizationFilter@621a387f]
+18:39:28:6870 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+18:39:28:7030 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path ''
+18:39:28:7240 [main] INFO  in.dhirajrajput.JournalApplication - Started JournalApplication in 6.697 seconds (process running for 7.132)
+18:39:36:0650 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18:39:36:0650 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+18:39:36:0670 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+18:39:37:4160 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve class org.bson.types.ObjectId
+18:39:37:4250 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class int]
+18:39:37:4540 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.util.Date]
+18:39:37:4760 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve class in.dhirajrajput.response_request.JournalEntryDto
+18:39:37:4770 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.lang.String]
+18:39:37:4870 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.time.LocalDateTime]
+18:39:37:4950 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve org.springframework.http.ResponseEntity<in.dhirajrajput.entity.JournalEntry>
+18:39:37:4960 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class in.dhirajrajput.entity.JournalEntry]
+18:39:37:4980 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class org.bson.types.ObjectId]
+18:39:37:5000 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class int]
+18:39:37:5010 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.util.Date]
+18:39:37:5070 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.lang.String]
+18:39:37:5090 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.time.LocalDateTime]
+18:39:37:5110 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class in.dhirajrajput.enums.Sentiment]
+18:39:37:5220 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve class in.dhirajrajput.response_request.UserDto
+18:39:37:5230 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class org.bson.types.ObjectId]
+18:39:37:5260 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class int]
+18:39:37:5270 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.util.Date]
+18:39:37:5290 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.lang.String]
+18:39:37:5430 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class boolean]
+18:39:37:5530 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve org.springframework.http.ResponseEntity<java.lang.String>
+18:39:37:5540 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.lang.String]
+18:39:37:5570 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve class in.dhirajrajput.response_request.UserDto
+18:39:37:5580 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class org.bson.types.ObjectId]
+18:39:37:5600 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class int]
+18:39:37:5610 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.util.Date]
+18:39:37:5620 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.lang.String]
+18:39:37:5640 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class boolean]
+18:39:37:5660 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve org.springframework.http.ResponseEntity<in.dhirajrajput.response_request.UserDto>
+18:39:37:5670 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class in.dhirajrajput.response_request.UserDto]
+18:39:37:5680 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class org.bson.types.ObjectId]
+18:39:37:5700 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class int]
+18:39:37:5730 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.util.Date]
+18:39:37:5760 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.lang.String]
+18:39:37:5790 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class boolean]
+18:39:37:5810 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve class in.dhirajrajput.response_request.JournalEntryDto
+18:39:37:5820 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.lang.String]
+18:39:37:5860 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.time.LocalDateTime]
+18:39:37:5920 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve org.springframework.http.ResponseEntity<in.dhirajrajput.response_request.JournalEntryDto>
+18:39:37:5920 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class in.dhirajrajput.response_request.JournalEntryDto]
+18:39:37:5930 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.lang.String]
+18:39:37:5950 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.time.LocalDateTime]
+18:39:37:5970 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve org.springframework.http.ResponseEntity<java.lang.Object>
+18:39:37:5980 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.lang.Object]
+18:39:37:6020 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve org.springframework.http.ResponseEntity<java.lang.Object>
+18:39:37:6030 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.lang.Object]
+18:39:37:6060 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve class org.bson.types.ObjectId
+18:39:37:6080 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class int]
+18:39:37:6090 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.util.Date]
+18:39:37:6110 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve org.springframework.http.ResponseEntity<in.dhirajrajput.entity.JournalEntry>
+18:39:37:6120 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class in.dhirajrajput.entity.JournalEntry]
+18:39:37:6130 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class org.bson.types.ObjectId]
+18:39:37:6150 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class int]
+18:39:37:6160 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.util.Date]
+18:39:37:6180 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.lang.String]
+18:39:37:6200 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.time.LocalDateTime]
+18:39:37:6210 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class in.dhirajrajput.enums.Sentiment]
+18:39:37:6260 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve class org.bson.types.ObjectId
+18:39:37:6280 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class int]
+18:39:37:6290 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.util.Date]
+18:39:37:6320 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve org.springframework.http.ResponseEntity<java.lang.Object>
+18:39:37:6320 [http-nio-9090-exec-9] DEBUG i.s.v.c.c.ModelConverterContextImpl - resolve [simple type, class java.lang.Object]
+18:39:37:6440 [http-nio-9090-exec-9] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 384 ms
+18:40:23:3770 [http-nio-9090-exec-7] DEBUG o.s.api.AbstractOpenApiResource - Fetching openApi document from cache
+18:41:20:2520 [SpringApplicationShutdownHook] DEBUG io.lettuce.core.AbstractRedisClient - Initiate shutdown (100, 100, MILLISECONDS)
+18:41:20:2710 [SpringApplicationShutdownHook] DEBUG i.l.c.r.DefaultClientResources - Initiate shutdown (0, 2, SECONDS)
+18:41:20:2750 [SpringApplicationShutdownHook] DEBUG i.l.c.r.DefaultEventLoopGroupProvider - Initiate shutdown (0, 2, SECONDS)
