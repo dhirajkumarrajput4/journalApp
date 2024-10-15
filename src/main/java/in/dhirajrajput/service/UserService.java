@@ -48,11 +48,11 @@ public class UserService {
                 existingUser.setPassword(user.getPassword());
                 updateUser(existingUser);
             }
-            {
+        else{
                 log.error("User Not found for update.");
                 throw new IllegalStateException("User not found");
             }
-        } catch (Exception exception) {
+        } catch (Exception exception) { 
             log.error("This user not able to update." + user);
             throw new IllegalStateException("Unable to update user.");
         }
